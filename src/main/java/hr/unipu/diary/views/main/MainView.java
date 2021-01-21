@@ -29,7 +29,7 @@ import com.vaadin.flow.theme.lumo.Lumo;
  */
 @CssImport(value = "./styles/views/main/main-view.css", themeFor = "vaadin-app-layout")
 @CssImport("./styles/views/main/main-view.css")
-@PWA(name = "STP_Diary", shortName = "STP_Diary", enableInstallPrompt = false)
+@PWA(name = "diary", shortName = "diary", enableInstallPrompt = false)
 @JsModule("./styles/shared-styles.js")
 @Theme(value = Lumo.class, variant = Lumo.DARK)
 public class MainView extends AppLayout {
@@ -60,12 +60,12 @@ public class MainView extends AppLayout {
         header.setWidthFull();
         header.setAlignItems(FlexComponent.Alignment.CENTER);
         header.setId("header");
-        Image logo = new Image("images/logo.png", "STP_Diary logo");
+        Image logo = new Image("images/logo.png", "diary logo");
         logo.setId("logo");
         header.add(logo);
         Image avatar = new Image("images/user.svg", "Avatar");
         avatar.setId("avatar");
-        header.add(new H1("STP_Diary"));
+        header.add(new H1("diary"));
         header.add(avatar);
         return header;
     }
