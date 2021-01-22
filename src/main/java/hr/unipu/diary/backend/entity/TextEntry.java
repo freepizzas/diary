@@ -5,7 +5,7 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-@Entity(name = "TextInfo")
+@Entity
 public class TextEntry extends AbstractEntity {
 
     @NotNull

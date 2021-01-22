@@ -6,7 +6,7 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.validation.constraints.*;
 
-@Entity(name = "UserInfo")
+@Entity
 public class User extends AbstractEntity {
     @NotEmpty
     @Email
