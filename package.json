@@ -60,7 +60,7 @@
       "webpack-merge": "4.2.2",
       "webpack-dev-server": "3.11.0"
     },
-    "hash": "2c2a550f833de620c43fd46584fa84dfb39857d3c327fc335f4d15c467accee3"
+    "hash": "e7895525b272d8bf1cd5806eccc1931a83e78c2d1bb0a21a96cc729ac7819ab0"
   },
   "dependencies": {
     "lit-element": "^2.2.1",
@@ -110,14 +110,14 @@
     "open": "^7.2.1"
   },
   "devDependencies": {
-    "webpack-babel-multi-target-plugin": "2.3.3",
-    "copy-webpack-plugin": "5.1.2",
+    "chokidar": "^3.5.1",
     "compression-webpack-plugin": "4.0.1",
+    "copy-webpack-plugin": "5.1.2",
     "raw-loader": "3.1.0",
-    "webpack-cli": "3.3.11",
     "webpack": "4.42.0",
-    "chokidar": "^3.4.0",
-    "webpack-merge": "4.2.2",
-    "webpack-dev-server": "3.11.0"
+    "webpack-babel-multi-target-plugin": "2.3.3",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-server": "3.11.0",
+    "webpack-merge": "4.2.2"
   }
 }
