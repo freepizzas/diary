@@ -5,6 +5,8 @@ import '@vaadin/vaadin-list-box/src/vaadin-list-box.js';
 import '@vaadin/vaadin-item/src/vaadin-item.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
+import '@vaadin/vaadin-button/src/vaadin-button.js';
+import '@polymer/iron-icon/iron-icon.js';
 
 class FeelingView extends PolymerElement {
 
@@ -15,14 +17,49 @@ class FeelingView extends PolymerElement {
                     display: block;
                     height: 100%;
                     width: 100%;
+                    background-color: white;
+                }
+                .centered {
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    margin-top: 5%;
+                    margin-bottom: 5%;
+                }
+                .icon-spacing {
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 5%;
+                    margin-bottom: 5%;
                 }
             </style>
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
-  <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
+<vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
+ <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout"></vaadin-horizontal-layout>
+ <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout1">
+  <vaadin-horizontal-layout theme="spacing" style="width: 100%;" class="centered" id="vaadinHorizontalLayout2">
+   <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout1">
+    <!--   Prvi icon-->
+    <vaadin-button theme="icon" aria-label="Add new" id="vaadinButton">
+     <iron-icon id="button"></iron-icon>
+    </vaadin-button>
+    <vaadin-button theme="icon" aria-label="Add new">
+     <iron-icon icon="lumo:plus"></iron-icon>
+    </vaadin-button>
+   </vaadin-vertical-layout>
+   <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout2">
+    <!--   Drugi icon-->
+   </vaadin-vertical-layout>
+   <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout3">
+    <!--   Treci icon-->
+   </vaadin-vertical-layout>
+   <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout4">
+    <!--   Cetvrti icon-->
+   </vaadin-vertical-layout>
+   <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout5">
+    <!--   Peti icon-->
+   </vaadin-vertical-layout>
+  </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
+ <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout3"></vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;
     }

@@ -14,7 +14,6 @@ class HomeView extends PolymerElement {
         display: block;
         height: 100%;
         padding: 1em;
-        background-color: white;
       }
       .center {
           margin-right: auto;
@@ -79,39 +78,39 @@ class HomeView extends PolymerElement {
           line-height: 1;
       }  
 </style>
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
-  <navbar-view></navbar-view>
+<vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
+ <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout">
+  <navbar-view id="navbarView"></navbar-view>
  </vaadin-horizontal-layout>
- <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
-  <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
-   <vaadin-vertical-layout theme="spacing" class="center">
-    <vaadin-horizontal-layout theme="spacing" class="center">
-     <div>
-      <h1 class="header1"> HELLO "ALICE" </h1>
-      <h1 class="header2"> WHAT DO YOU WANT TO DO TODAY? </h1>
+ <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinVerticalLayout1">
+  <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout1">
+   <vaadin-vertical-layout theme="spacing" class="center" id="vaadinVerticalLayout2">
+    <vaadin-horizontal-layout theme="spacing" class="center" id="vaadinHorizontalLayout2">
+     <div id="div">
+      <h1 class="header1" id="h1"> HELLO "ALICE" </h1>
+      <h1 class="header2" id="h11"> WHAT DO YOU WANT TO DO TODAY? </h1>
      </div>
     </vaadin-horizontal-layout>
-    <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; flex-grow: 0;">
-     <vaadin-button theme="primary" class="btn-1">
+    <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; flex-grow: 0;" id="vaadinHorizontalLayout3">
+     <vaadin-button theme="primary" class="btn-1" id="vaadinButton">
        ASK ME A QUESTION 
      </vaadin-button>
     </vaadin-horizontal-layout>
-    <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
-     <vaadin-button theme="primary" class="btn-2">
+    <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout4">
+     <vaadin-button theme="primary" class="btn-2" id="vaadinButton1">
        LET ME WRITE 
      </vaadin-button>
     </vaadin-horizontal-layout>
-    <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
-     <vaadin-button theme="primary" class="btn-3">
+    <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout5">
+     <vaadin-button theme="primary" class="btn-3" id="vaadinButton2">
        I'M IN A MOOD 
      </vaadin-button>
     </vaadin-horizontal-layout>
    </vaadin-vertical-layout>
   </vaadin-horizontal-layout>
  </vaadin-vertical-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
+ <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout6"></vaadin-horizontal-layout>
+ <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout7"></vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;
   }
