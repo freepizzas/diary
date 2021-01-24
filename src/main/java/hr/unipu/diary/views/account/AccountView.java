@@ -19,16 +19,6 @@ import hr.unipu.diary.views.main.MainView;
 @Tag("account-view")
 public class AccountView extends PolymerTemplate<TemplateModel> {
 
-    @Id
-    private TextField name;
-
-    @Id
-    private Button sayHello;
-
     public AccountView() {
-        setId("hello-world-view");
-        sayHello.addClickListener(e -> {
-            Notification.show("Hello " + name.getValue());
-        });
     }
 }

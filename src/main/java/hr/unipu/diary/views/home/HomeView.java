@@ -21,16 +21,6 @@ import com.vaadin.flow.router.RouteAlias;
 @RouteAlias(value = "", layout = MainView.class)
 public class HomeView extends PolymerTemplate<TemplateModel> {
 
-    @Id
-    private TextField name;
-
-    @Id
-    private Button sayHello;
-
     public HomeView() {
-        setId("hello-world-view");
-        sayHello.addClickListener(e -> {
-            Notification.show("Hello " + name.getValue());
-        });
     }
 }

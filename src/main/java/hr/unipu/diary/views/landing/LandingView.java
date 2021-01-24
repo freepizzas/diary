@@ -12,7 +12,7 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
  * does not overwrite or otherwise change this file.
  */
 @Tag("landing-view")
-@JsModule("./src/views/landing-view.js")
+@JsModule("./src/views/landing/landing-view.js")
 public class LandingView extends PolymerTemplate<LandingView.LandingViewModel> {
 
     /**
