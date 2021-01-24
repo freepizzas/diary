@@ -1,9 +1,13 @@
 package hr.unipu.diary.views.feeling;
 
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.polymertemplate.Id;
+import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.templatemodel.TemplateModel;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
+import org.vaadin.alump.materialicons.MaterialIcons;
 
 /**
  * A Designer generated component for the feeling-view template.
@@ -14,6 +18,9 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 @Tag("feeling-view")
 @JsModule("./src/views/feeling/feeling-view.js")
 public class FeelingView extends PolymerTemplate<FeelingView.FeelingViewModel> {
+
+    @Id("vaadinButton")
+    private Button vaadinButton;
 
     /**
      * Creates a new FeelingView.
