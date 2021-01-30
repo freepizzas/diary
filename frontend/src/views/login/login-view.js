@@ -11,26 +11,26 @@ class LoginView extends PolymerElement {
                     display: block;
                     height: 100%;
                 }
-                #vaadinLoginForm {
-                    /*border-radius: 35px !important;*/
-                    /*margin: 50px 50px 50px 50px;*/
-                    /*background-color: white;*/
-                }
-                #vaadinLoginUsername {
+                /*#vaadinLoginForm {*/
+                /*    !*border-radius: 35px !important;*!*/
+                /*    !*margin: 50px 50px 50px 50px;*!*/
+                /*    !*background-color: white;*!*/
+                /*}*/
+                /*#vaadinLoginUsername {*/
                 
-                }
-                #vaadinLoginPassword {
-                    /*padding-top: 0px;*/
-                }
-                [part="vaadin-login-native-form"] {
-                    padding: 0px 0px 0px 0px;
-                }
+                /*}*/
+                /*#vaadinLoginPassword {*/
+                /*    !*padding-top: 0px;*!*/
+                /*}*/
+                /*[part="vaadin-login-native-form"] {*/
+                /*    padding: 0px 0px 0px 0px;*/
+                /*}*/
                 
-                /*Button*/
-                [part="vaadin-login-submit"] {
-                    font-family: 'Roboto', 'Noto', sans-serif;
-                    color: white;
-                }
+                /*!*Button*!*/
+                /*[part="vaadin-login-submit"] {*/
+                /*    font-family: 'Roboto', 'Noto', sans-serif;*/
+                /*    color: white;*/
+                /*}*/
                 
 
 
