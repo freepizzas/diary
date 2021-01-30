@@ -38,7 +38,7 @@ import com.vaadin.flow.theme.lumo.Lumo;
 @CssImport("./styles/views/main/main-view.css")
 @PWA(name = "diary", shortName = "diary", enableInstallPrompt = false)
 @JsModule("./styles/shared-styles.js")
-@Theme(value = Lumo.class, variant = Lumo.DARK)
+@Theme(value = Lumo.class, variant = Lumo.LIGHT)
 public class MainView extends AppLayout implements BeforeEnterObserver {
 
     private final Tabs menu;
@@ -51,7 +51,7 @@ public class MainView extends AppLayout implements BeforeEnterObserver {
 
     private VerticalLayout createTopBar(HorizontalLayout header, Tabs menu) {
         VerticalLayout layout = new VerticalLayout();
-        layout.getThemeList().add("dark");
+        layout.getThemeList().add("light");
         layout.setWidthFull();
         layout.setSpacing(false);
         layout.setPadding(false);
