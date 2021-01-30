@@ -21,7 +21,7 @@ public class DataGenerator {
                 return;
             }
             logger.info("Generating demo data");
-            userRepository.save(new User("user", "u", Role.USER));
+            userRepository.save(new User("alice", "a", Role.USER));
             userRepository.save(new User("admin", "a", Role.ADMIN));
 
             logger.info("Generated demo data");

@@ -23,3 +23,10 @@ vaadin-app-layout[dir='rtl'] vaadin-horizontal-layout #header img#avatar {
   margin-left: var(--lumo-space-m);
   margin-right: auto;
 }
+
+html {
+  --lumo-primary-text-color: black;
+  --lumo-primary-color: hsl(265, 90%, 52%);
+  --lumo-primary-color-50pct: hsla(265, 90%, 52%, 0.5);
+  --lumo-primary-color-10pct: hsla(265, 90%, 52%, 0.1);
+}

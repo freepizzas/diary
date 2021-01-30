@@ -1,9 +1,9 @@
 import {PolymerElement} from '@polymer/polymer/polymer-element.js';
 import {html} from '@polymer/polymer/lib/utils/html-tag.js';
 import '../feeling/feeling-view.js';
-import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
+import '@vaadin/vaadin-button/src/vaadin-button.js';
 
 class HomeView extends PolymerElement {
   static get template() {
@@ -92,7 +92,7 @@ class HomeView extends PolymerElement {
   <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout1">
    <vaadin-vertical-layout theme="spacing" class="center" id="vaadinVerticalLayout2" style="justify-content: center;">
     <div id="div" class="makeitround">
-     <h1 class="header1" items="name" id="h1"> HELLO "[[ALICE]]" </h1>
+     <h1 class="header1" items="items" id="h1"> HELLO [[items]] </h1>
      <h1 class="header2" id="h11"> WHAT DO YOU WANT TO DO TODAY? </h1>
     </div>
     <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout3">
@@ -101,9 +101,6 @@ class HomeView extends PolymerElement {
      </vaadin-button>
      <vaadin-button theme="primary" class="btn-2" id="letMeWrite">
        LET ME WRITE 
-     </vaadin-button>
-     <vaadin-button theme="primary" class="btn-3" id="inAMood">
-       I'M IN A MOOD 
      </vaadin-button>
     </vaadin-horizontal-layout>
    </vaadin-vertical-layout>
