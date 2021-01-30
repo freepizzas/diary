@@ -1,5 +1,8 @@
 package hr.unipu.diary.backend.entity;
 
+import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.RandomStringUtils;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.PrePersist;
@@ -8,44 +11,48 @@ import javax.validation.constraints.*;
 
 @Entity
 public class User extends AbstractEntity {
-    @NotEmpty
-    @Email
-    @Size(max = 255)
-    @Column(unique = true)
-    private String email;
-
-    @NotNull
-    @Size(min = 8, max = 16)
-    private String password;
-
-    @NotBlank
-    @Size(max = 255)
+    private String username;
+    private String passwordSalt;
+    private String passwordHash;
     private String name;
+    private Role role;
 
     public User() {
         // An empty constructor is needed for all beans
     }
 
-    @PrePersist
-    @PreUpdate
-    private void prepareData() {
-        this.email = email == null ? null : email.toLowerCase();
+    public User(String username, String password, Role role){
+        this.username = username;
+        this.role = role;
+        this.passwordSalt = RandomStringUtils.random(32);
+        this.passwordHash = DigestUtils.sha1Hex(password + passwordSalt);
+    }
+    public boolean checkPassword(String password){
+        return DigestUtils.sha1Hex(password + passwordSalt).equals(passwordHash);
     }
 
-    public String getEmail() {
-        return email;
+    public String getUsername() {
+        return username;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPasswordSalt() {
+        return passwordSalt;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPasswordSalt(String passwordSalt) {
+        this.passwordSalt = passwordSalt;
+    }
+
+    public String getPasswordHash() {
+        return passwordHash;
+    }
+
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
     }
 
     public String getName() {
@@ -54,5 +61,13 @@ public class User extends AbstractEntity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 }
