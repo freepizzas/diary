@@ -9,7 +9,6 @@ import com.vaadin.flow.templatemodel.TemplateModel;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
-import hr.unipu.diary.backend.service.MoodEntryService;
 
 @Route("feeling")
 @Tag("feeling-view")

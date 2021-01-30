@@ -14,7 +14,6 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import hr.unipu.diary.backend.entity.MoodEntry;
 import hr.unipu.diary.backend.entity.TextEntry;
 import hr.unipu.diary.backend.entity.User;
-import hr.unipu.diary.backend.repository.TextEntryRepository;
 import hr.unipu.diary.backend.service.MoodEntryService;
 import hr.unipu.diary.backend.service.TextEntryService;
 import hr.unipu.diary.views.feeling.FeelingView;
@@ -54,8 +53,10 @@ public class TexteditorView extends PolymerTemplate<TexteditorView.TexteditorVie
                             TextEntry entry = new TextEntry(user.getUsername(), time, longFormat, rtString);
                             textEntryService.save(entry);
                             var mood = VaadinSession.getCurrent().getAttribute("mood");
-                            MoodEntry moodEntry = new MoodEntry(user.getUsername(), ((Integer) mood).intValue(), time, longFormat);
-                            moodEntryService.save(moodEntry);
+                            if(mood != null){
+                                MoodEntry moodEntry = new MoodEntry(user.getUsername(), ((Integer) mood).intValue(), time, longFormat);
+                                moodEntryService.save(moodEntry);
+                            }
                             save.getUI().ifPresent(ui ->
                             ui.navigate("home"));
                         }

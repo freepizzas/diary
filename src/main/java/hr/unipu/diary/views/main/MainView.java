@@ -112,8 +112,12 @@ public class MainView extends AppLayout implements BeforeEnterObserver {
 
     @Override
     public void beforeEnter(BeforeEnterEvent event) {
-//        if(VaadinSession.getCurrent().getAttribute("access").equals(true)){
-//            event.rerouteTo("");
-//        }
+        var access = VaadinSession.getCurrent().getAttribute("access");
+        if(access == null){
+            event.rerouteTo("");
+
+        } else if (!((Boolean) access).booleanValue()) {
+            event.rerouteTo("");
+        }
     }
 }

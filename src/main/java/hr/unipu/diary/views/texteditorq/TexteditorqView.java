@@ -57,7 +57,7 @@ public class TexteditorqView extends PolymerTemplate<TexteditorqView.Texteditorq
                     TextEntry entry = new TextEntry(user.getUsername(), time, longFormat, rtString, question);
                     textEntryService.save(entry);
                     save.getUI().ifPresent(ui ->
-                            ui.navigate("home"));
+                            ui.navigate(""));
                 }
         );
     }

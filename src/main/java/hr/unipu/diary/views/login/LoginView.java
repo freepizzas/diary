@@ -6,6 +6,7 @@ import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.server.VaadinSession;
 import com.vaadin.flow.templatemodel.TemplateModel;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
@@ -22,15 +23,13 @@ public class LoginView extends PolymerTemplate<LoginView.LoginViewModel> {
     @Id("vaadinLoginForm")
     private LoginForm vaadinLoginForm;
 
-    /**
-     * Creates a new LoginView.
-     */
     public LoginView(AuthService authService) {
         vaadinVerticalLayout.getStyle().set("background-image", "url('images/blues.png')");
         vaadinLoginForm.setForgotPasswordButtonVisible(false);
         vaadinLoginForm.addLoginListener(e -> {
             try {
                 authService.authenticate(e.getUsername(), e.getPassword());
+                VaadinSession.getCurrent().setAttribute("access", true);
                 UI.getCurrent().navigate("home");
             } catch (AuthService.AuthException authException) {
                 Notification.show("Wrong credentials.");
