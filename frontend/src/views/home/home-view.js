@@ -37,7 +37,7 @@ class HomeView extends PolymerElement {
           color: white;
           text-align: center;
           background-color: #ff4f5a; 
-          margin-top: 15;
+          margin-top: 15px;
           padding: 10px 30px 10px 30px;
           border: 2px solid white;
           border-radius: 25px;
@@ -47,6 +47,7 @@ class HomeView extends PolymerElement {
         font-family: 'roboto_condensedbold';
         font-weight: 600;
         background-color: #ff4f5a;
+        margin-left: auto;
         color: white;
         display: block;
         text-align: center;
@@ -55,13 +56,13 @@ class HomeView extends PolymerElement {
         border-radius: 25px;
         border: 2px solid white;
         line-height: 1;
-          height: 70px;
+        height: 70px;
       }
       .btn-2 {
         font-family: 'roboto_condensedbold';
         font-weight: 600;
-          margin-left: auto;
-          margin-right: 4%;
+
+          margin-right: auto;
           background-color: #ff4f5a;
           color: white;
           text-align: center;
@@ -72,19 +73,6 @@ class HomeView extends PolymerElement {
           line-height: 1;
           height: 70px;
       }
-      .btn-3 {
-        font-family: 'roboto_condensedbold';
-        font-weight: 600;
-        background-color: #ff4f5a;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        font-size: 20px;
-        border-radius: 25px;
-        border: 2px solid white;
-            line-height: 1;
-            height: 70px;
-      }  
 </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
  <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinVerticalLayout1">

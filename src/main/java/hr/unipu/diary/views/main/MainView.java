@@ -86,9 +86,9 @@ public class MainView extends AppLayout implements BeforeEnterObserver {
 
     private static Tab[] getAvailableTabs() {
         return new Tab[]{
-                createTab("Home", HomeView.class),
-                createTab("History", HistoryView.class),
-                createTab("Account", AccountView.class)};
+                createTab("HOME", HomeView.class),
+                createTab("HISTORY", HistoryView.class),
+                createTab("ACCOUNT", AccountView.class)};
     }
 
     private static Tab createTab(String text, Class<? extends Component> navigationTarget) {
