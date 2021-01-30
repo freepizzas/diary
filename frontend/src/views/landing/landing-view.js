@@ -64,40 +64,41 @@ class LandingView extends PolymerElement {
                     height: 60px;
                     width: 250px;
                     border-radius: 25px;
-                    opacity: 1;          
-                }                
+                    opacity: 1;
+                }
             </style>
-<vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; justify-content: center;">
-  <vaadin-vertical-layout theme="spacing" style="flex-grow: 0; justify-content: center;">
-   <vaadin-horizontal-layout theme="spacing" class="center">
-    <div class="top-text">
-      JOURNAL 
-    </div>
-   </vaadin-horizontal-layout>
-   <vaadin-horizontal-layout theme="spacing" class="center">
-    <div class="mid-text">
-      WHENEVER, 
-    </div>
-   </vaadin-horizontal-layout>
-   <vaadin-horizontal-layout theme="spacing" class="center">
-    <div class="bot-text">
-      WHEREVER. 
-    </div>
-   </vaadin-horizontal-layout>
-  </vaadin-vertical-layout>
- </vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; align-items: center; align-self: center; justify-content: center;">
-  <vaadin-button theme="large" class="btn-center-1" id="joinNow">
-    JOIN NOW 
-  </vaadin-button>
- </vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
-</vaadin-vertical-layout>
-`;
+            <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
+                <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
+                <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
+                <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; justify-content: center;">
+                    <vaadin-vertical-layout theme="spacing" style="flex-grow: 0; justify-content: center;">
+                        <vaadin-horizontal-layout theme="spacing" class="center">
+                            <div class="top-text">
+                                JOURNAL
+                            </div>
+                        </vaadin-horizontal-layout>
+                        <vaadin-horizontal-layout theme="spacing" class="center">
+                            <div class="mid-text">
+                                WHENEVER,
+                            </div>
+                        </vaadin-horizontal-layout>
+                        <vaadin-horizontal-layout theme="spacing" class="center">
+                            <div class="bot-text">
+                                WHEREVER.
+                            </div>
+                        </vaadin-horizontal-layout>
+                    </vaadin-vertical-layout>
+                </vaadin-horizontal-layout>
+                <vaadin-horizontal-layout theme="spacing"
+                                          style="width: 100%; height: 100%; align-items: center; align-self: center; justify-content: center;">
+                    <vaadin-button theme="large" class="btn-center-1" id="joinNow">
+                        JOIN NOW
+                    </vaadin-button>
+                </vaadin-horizontal-layout>
+                <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
+                <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
+            </vaadin-vertical-layout>
+        `;
     }
 
     static get is() {

@@ -56,9 +56,8 @@ class HistoryView extends PolymerElement {
        [[item.date]], [[item.time]]
      </div>
      <vaadin-vertical-layout id="vaadinVerticalLayout">
-      <vaadin-text-area id="name">
-        [[item.rtext]]
-      </vaadin-text-area>
+       <div><b> [[item.question]] </b></div>
+       <div>  [[item.rtext]] </div>
      </vaadin-vertical-layout>
     </vaadin-accordion-panel>
    </vaadin-accordion>

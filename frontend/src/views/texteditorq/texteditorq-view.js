@@ -1,11 +1,6 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import '@vaadin/vaadin-rich-text-editor/src/vaadin-rich-text-editor.js';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
-import '@vaadin/vaadin-button/src/vaadin-button.js';
-import '../feeling/feeling-view.js';
 
-class TexteditorView extends PolymerElement {
+class TexteditorqView extends PolymerElement {
 
     static get template() {
         return html`
@@ -53,7 +48,7 @@ class TexteditorView extends PolymerElement {
             </style>
             <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout" class="background">
                 <vaadin-horizontal-layout style="width:100%; height: 20%">
-                    <feeling-view></feeling-view>
+<!--                    <feeling-view></feeling-view>-->
                 </vaadin-horizontal-layout>
                 <vaadin-vertical-layout style="height: 100%; width:100%;" class="background">
                     <vaadin-rich-text-editor class="editor" html-value="<p><br></p>"
@@ -67,7 +62,7 @@ class TexteditorView extends PolymerElement {
     }
 
     static get is() {
-        return 'texteditor-view';
+        return 'texteditorq-view';
     }
 
     static get properties() {
@@ -77,4 +72,4 @@ class TexteditorView extends PolymerElement {
     }
 }
 
-customElements.define(TexteditorView.is, TexteditorView);
+customElements.define(TexteditorqView.is, TexteditorqView);
