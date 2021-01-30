@@ -36,7 +36,7 @@ public class HomeView extends PolymerTemplate<TemplateModel> {
     private Button inAMood;
 
     public HomeView() {
-        vaadinVerticalLayout.getStyle().set("background-image", "url('images/temporay.png')");
+        vaadinVerticalLayout.getStyle().set("background-image", "url('images/tea.jpg')");
 
         letMeWrite.addClickListener(e -> {
             letMeWrite.getUI().ifPresent(ui ->

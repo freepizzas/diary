@@ -23,26 +23,17 @@ public class FeelingView extends PolymerTemplate<FeelingView.FeelingViewModel> {
 
     @Id("vaadinVerticalLayout")
     private Element vaadinVerticalLayout;
-    @Id("vaadinHorizontalLayout")
-    private Element vaadinHorizontalLayout;
-    @Id("vaadinHorizontalLayout1")
-    private Element vaadinHorizontalLayout1;
-    @Id("vaadinHorizontalLayout2")
-    private Element vaadinHorizontalLayout2;
-    @Id("vaadinVerticalLayout1")
-    private Element vaadinVerticalLayout1;
     @Id("vaadinButton")
     private Button vaadinButton;
-    @Id("vaadinVerticalLayout2")
-    private Element vaadinVerticalLayout2;
-    @Id("vaadinVerticalLayout3")
-    private Element vaadinVerticalLayout3;
-    @Id("vaadinVerticalLayout4")
-    private Element vaadinVerticalLayout4;
-    @Id("vaadinVerticalLayout5")
-    private Element vaadinVerticalLayout5;
-    @Id("vaadinHorizontalLayout3")
-    private Element vaadinHorizontalLayout3;
+    @Id("vaadinButton1")
+    private Button vaadinButton1;
+    @Id("vaadinButton2")
+    private Button vaadinButton2;
+    @Id("vaadinButton3")
+    private Button vaadinButton3;
+    @Id("vaadinButton4")
+    private Button vaadinButton4;
+
 
     /**
      * Creates a new FeelingView.

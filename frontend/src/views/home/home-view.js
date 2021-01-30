@@ -19,24 +19,25 @@ class HomeView extends PolymerElement {
       }
       .header1 {
         font-family: 'roboto_condensedbold';
-        font-size: 50px;
+        font-size: 35px;
           font-weight: 800;
           color: white;
           margin-bottom: -5%;
           text-align: center;
           background-color: #ff4f5a;
           border: 2px solid white;
-          padding-bottom: 20px;
+          padding-bottom: 15px;
           border-radius: 25px;
           margin-top: 0px;
       }
       .header2 {
         font-family: 'roboto_condensedbold';
-        font-size: 50px;
+        font-size: 35px;
           font-weight: 800;
           color: white;
           text-align: center;
           background-color: #ff4f5a; 
+          margin-top: 15;
           padding: 10px 30px 10px 30px;
           border: 2px solid white;
           border-radius: 25px;
@@ -45,48 +46,44 @@ class HomeView extends PolymerElement {
       .btn-1 {
         font-family: 'roboto_condensedbold';
         font-weight: 600;
-          margin-left: auto;
-          margin-right: auto;
-          background-color: #ff4f5a;
-          color: white;
-          display: block;
-          text-align: center;
-          text-decoration: none;
-          font-size: 26px;
-          border-radius: 25px;
-          border: 3px solid white;
-          line-height: 1;
+        background-color: #ff4f5a;
+        color: white;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 25px;
+        border: 2px solid white;
+        line-height: 1;
           height: 70px;
       }
       .btn-2 {
         font-family: 'roboto_condensedbold';
         font-weight: 600;
           margin-left: auto;
-          margin-right: auto;
+          margin-right: 4%;
           background-color: #ff4f5a;
           color: white;
           text-align: center;
           text-decoration: none;
-          font-size: 26px;
+          font-size: 20px;
           border-radius: 25px;
-          border: 3px solid white;
+          border: 2px solid white;
           line-height: 1;
           height: 70px;
       }
       .btn-3 {
         font-family: 'roboto_condensedbold';
         font-weight: 600;
-          margin-left: auto;
-          margin-right: auto;
-          background-color: #ff4f5a;
-          color: white;
-          text-align: center;
-          text-decoration: none;
-          font-size: 26px;
-          border-radius: 25px;
-          border: 3px solid white;
-          line-height: 1;
-          height: 70px; 
+        background-color: #ff4f5a;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 25px;
+        border: 2px solid white;
+            line-height: 1;
+            height: 70px;
       }  
 </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
