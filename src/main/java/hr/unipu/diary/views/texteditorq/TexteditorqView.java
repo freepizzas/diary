@@ -21,6 +21,10 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Random;
 
 @Tag("texteditorq-view")
 @Route(value = "editorq", layout = MainView.class)
@@ -34,10 +38,14 @@ public class TexteditorqView extends PolymerTemplate<TexteditorqView.Texteditorq
     private Button save;
     @Id("richtext")
     private RichTextEditor richtext;
-
+    String question;
     public TexteditorqView(TextEntryService textEntryService) {
         vaadinVerticalLayout.getStyle().set("background-image", "url('images/editor.png')");
         var hasQuestion = VaadinSession.getCurrent().getAttribute("hasQuestion");
+        if(((Boolean) hasQuestion).booleanValue()){
+            question = getQuestions();
+            getModel().setItems(question);
+        }
         var user = VaadinSession.getCurrent().getAttribute(User.class);
 
         save.addClickListener(e -> {
@@ -46,18 +54,31 @@ public class TexteditorqView extends PolymerTemplate<TexteditorqView.Texteditorq
                     String longFormat = date.format(DateTimeFormatter.ofPattern("d. MMMM yyyy"));
                     var rt = richtext.getHtmlValue();
                     var rtString = Jsoup.parse(rt).text();
-                    //var user = VaadinSession.getCurrent().getAttribute(User.class);
-//                            var question = VaadinSession.getCurrent().getAttribute("hasQuestion");
-                    TextEntry entry = new TextEntry(user.getUsername(), time, longFormat, rtString);
+                    TextEntry entry = new TextEntry(user.getUsername(), time, longFormat, rtString, question);
                     textEntryService.save(entry);
                     save.getUI().ifPresent(ui ->
                             ui.navigate("home"));
                 }
-
         );
     }
 
+    private String getQuestions() {
+        Random rand = new Random();
+        List<String> questions = new ArrayList<>();
+        questions.add("What’s the one thing you would like to change about yourself?");
+        questions.add("What’s an ideal weekend for you?");
+        questions.add("What is one dream you have yet to accomplish?");
+        questions.add("What is the greatest struggle you’ve overcome?");
+        questions.add("If you could live anywhere in the world where would it be?");
+        questions.add("If you could change one thing about the world what would it be?");
+        questions.add("Who is your favorite historical figure?");
+        questions.add("Dogs or Cats?");
+        questions.add("If you could get away with anything that you do?");
+        questions.add("What fictional character do you most relate to?");
+        return questions.get(rand.nextInt(questions.size()));
+    }
+
     public interface TexteditorqViewModel extends TemplateModel {
-        // Add setters and getters for template properties here.
+        public void setItems(String items);
     }
 }

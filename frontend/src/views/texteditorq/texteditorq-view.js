@@ -5,7 +5,7 @@ class TexteditorqView extends PolymerElement {
 
     static get template() {
         return html`
-<style include="shared-styles">
+            <style include="shared-styles">
                 :host {
                     display: block;
                     width: 100%;
@@ -46,19 +46,37 @@ class TexteditorqView extends PolymerElement {
                     height: 45px;
                     width: 100px;
                 }
+
+                .askme {
+                    margin-left: 5%;
+                    margin-right: 4%;
+                    padding: 30px 30px 30px 30px;
+                }
             </style>
-<vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout" class="background">
- <vaadin-horizontal-layout style="width:100%; height: 20%">
-  <question-view></question-view>
- </vaadin-horizontal-layout>
- <vaadin-vertical-layout style="height: 100%; width:100%;" class="background">
-  <vaadin-rich-text-editor class="editor" html-value="<p><br></p>" id="richtext"></vaadin-rich-text-editor>
-  <vaadin-button class="btn" id="save">
-    SAVE 
-  </vaadin-button>
- </vaadin-vertical-layout>
-</vaadin-vertical-layout>
-`;
+            <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout" class="background">
+                <vaadin-horizontal-layout style="width:100%; height: 20%">
+                    <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout"
+                                            class="background">
+                        <vaadin-horizontal-layout style="width: 100%; height: 100%;" theme="spacing">
+                            <vaadin-horizontal-layout style="width: 100%; height: 100%;" theme="spacing">
+                                <div style="align-self: center; width: 100%" class="askme">
+                                    <div items=items class="inner">
+                                        [[items]]
+                                    </div>
+                                </div>
+                            </vaadin-horizontal-layout>
+                        </vaadin-horizontal-layout>
+                    </vaadin-vertical-layout>
+                </vaadin-horizontal-layout>
+                <vaadin-vertical-layout style="height: 100%; width:100%;" class="background">
+                    <vaadin-rich-text-editor class="editor" html-value="<p><br></p>"
+                                             id="richtext"></vaadin-rich-text-editor>
+                    <vaadin-button class="btn" id="save">
+                        SAVE
+                    </vaadin-button>
+                </vaadin-vertical-layout>
+            </vaadin-vertical-layout>
+        `;
     }
 
     static get is() {

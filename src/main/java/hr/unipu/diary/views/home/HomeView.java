@@ -51,9 +51,9 @@ public class HomeView extends PolymerTemplate<HomeView.HomeViewModel> {
         });
 
         askMeAQ.addClickListener(e -> {
+            VaadinSession.getCurrent().setAttribute("hasQuestion", true);
             askMeAQ.getUI().ifPresent(ui ->
                     ui.navigate("editorq"));
-            VaadinSession.getCurrent().setAttribute("hasQuestion", true);
         });
 
         var user = VaadinSession.getCurrent().getAttribute(User.class);
