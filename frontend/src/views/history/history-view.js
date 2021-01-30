@@ -15,9 +15,6 @@ class HistoryView extends PolymerElement {
           display: block;
           height: 100%;
         }
-        vaadin-accordion-panel > span {
-            color: black;
-        }
 
         vaadin-grid {
           height: 100%;
@@ -49,16 +46,12 @@ class HistoryView extends PolymerElement {
             padding-left: 36%;
             padding-bottom: 30px;
         }
-        .makeitblack {
-            color: black;
-            font-family: 'Roboto', 'Noto', sans-serif;
-        }
       </style>
 <vaadin-grid id="grid" items="[[items]]">
  <vaadin-grid-column id="vaadinGridColumn">
   <template>
    <vaadin-accordion id="vaadinAccordion">
-    <vaadin-accordion-panel id="vaadinAccordionPanel" items="[[items]]">
+    <vaadin-accordion-panel id="vaadinAccordionPanel" class="makeitblack" items="[[items]]">
      <div slot="summary" id="div" class="makeitblack">
        [[item.date]], [[item.time]]
      </div>

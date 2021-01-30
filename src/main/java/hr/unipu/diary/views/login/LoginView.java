@@ -26,6 +26,7 @@ public class LoginView extends PolymerTemplate<LoginView.LoginViewModel> {
      * Creates a new LoginView.
      */
     public LoginView(AuthService authService) {
+        vaadinVerticalLayout.getStyle().set("background-image", "url('images/blues.jpg')");
         vaadinLoginForm.setForgotPasswordButtonVisible(false);
         vaadinLoginForm.addLoginListener(e -> {
             try {

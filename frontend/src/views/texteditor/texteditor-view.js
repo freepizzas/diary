@@ -3,6 +3,7 @@ import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-rich-text-editor/src/vaadin-rich-text-editor.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
+import '../feeling/feeling-view.js';
 
 class TexteditorView extends PolymerElement {
 
@@ -14,25 +15,25 @@ class TexteditorView extends PolymerElement {
                     width: 100%;
                     height: 100%;
                 }
-
-                /*.background {*/
-                /*    background-color: rosybrown;*/
-                /*}*/
-                /*vaadin-rich*/
-                [part="toolbar"] {
-                    background-color: black;
-                }
                 .editor {
-                    padding-right: 5%;
-                    padding-left: 5%;
-                    padding-bottom: 5%;
-                    width: 100%;
+                    margin-right: 5%;
+                    margin-left: 5%;
+                    margin-bottom: 5%;
+                    width: 90%;
                     height: 100%;
+                    background-color: #ff4f5a;
+                    overflow: hidden;
+                    border-radius: 30px;
+                    border: 3px solid white;
+                }
+                .background {
+                    background-color: #fc5764;
                 }
                 .btn {
                     margin-left: auto;
                     margin-right: 5%;
-                    margin-top: -4.5%;
+                    margin-top: -3%;
+                    margin-bottom: 3%;
                     font-weight: 600;
                     background-color: #ff4f5a;
                     color: white;
@@ -40,20 +41,21 @@ class TexteditorView extends PolymerElement {
                     text-align: center;
                     text-decoration: none;
                     font-size: 20px;
-                    border-radius: 25px;
-                    border: 1px solid white;
-                    line-height: 1;
-                    height: 35px;
+                    border-radius: 15px;
+                    border: 3px solid white;
+                    line-height: 0;
+                    height: 45px;
+                    width: 100px;
                 }
             </style>
-<vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
- <vaadin-horizontal-layout style="width:100%; height: 20%" class="background">
-  <!-- Tu ide mood ili ask me a question-->
+<vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout" class="background">
+ <vaadin-horizontal-layout style="width:100%; height: 20%">
+  <feeling-view></feeling-view>
  </vaadin-horizontal-layout>
  <vaadin-vertical-layout style="height: 100%; width:100%;" class="background">
   <vaadin-rich-text-editor class="editor" html-value="<p><br></p>" id="richtext"></vaadin-rich-text-editor>
   <vaadin-button class="btn" id="save">
-    Save 
+    SAVE
   </vaadin-button>
  </vaadin-vertical-layout>
 </vaadin-vertical-layout>

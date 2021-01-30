@@ -11,9 +11,13 @@ class LoginView extends PolymerElement {
                     display: block;
                     height: 100%;
                 }
+                .newlook {
+                    border-radius: 25px !important;
+                    background-color: white;
+                }
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center;" id="vaadinVerticalLayout">
- <vaadin-login-form id="vaadinLoginForm"></vaadin-login-form>
+ <vaadin-login-form class="newlook" id="vaadinLoginForm"></vaadin-login-form>
 </vaadin-vertical-layout>
 `;
     }
