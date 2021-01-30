@@ -12,12 +12,6 @@ import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import hr.unipu.diary.backend.service.AuthService;
 
-/**
- * A Designer generated component for the login-view template.
- * <p>
- * Designer will add and remove fields with @Id mappings but
- * does not overwrite or otherwise change this file.
- */
 @Tag("login-view")
 @Route("login")
 @JsModule("./src/views/login/login-view.js")

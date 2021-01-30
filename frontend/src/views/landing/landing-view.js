@@ -47,8 +47,6 @@ class LandingView extends PolymerElement {
                 .btn-center-1 {
                     font-family: 'Roboto', 'Noto', sans-serif;
                     font-weight: 600;
-                    margin-left: auto;
-                    margin-right: 1%;
                     background-color: mediumpurple;
                     border: 1px rebeccapurple;
                     color: white;
@@ -57,21 +55,7 @@ class LandingView extends PolymerElement {
                     display: inline-block;
                     font-size: 26px;
                     border-radius: 3px;             
-                }
-                .btn-center-2 {
-                    font-family: 'Roboto', 'Noto', sans-serif;
-                    font-weight: 600;
-                    margin-right: auto;
-                    background-color: rebeccapurple; /* Green */
-                    border: none;
-                    color: white;
-                    text-align: center;
-                    text-decoration: none;
-                    display: inline-block;
-                    font-size: 26px;
-                    border-radius: 3px;                       
-                }
-                
+                }                
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
  <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
@@ -95,12 +79,9 @@ class LandingView extends PolymerElement {
    </vaadin-horizontal-layout>
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; align-items: center;">
-  <vaadin-button theme="large" class="btn-center-1">
+ <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; align-items: center; align-self: center; justify-content: center;">
+  <vaadin-button theme="large" class="btn-center-1" id="joinNow">
     JOIN NOW 
-  </vaadin-button>
-  <vaadin-button theme="large" class="btn-center-2">
-    SIGN IN 
   </vaadin-button>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
