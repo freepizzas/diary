@@ -95,19 +95,19 @@ class HomeView extends PolymerElement {
                             </vaadin-horizontal-layout>
                             <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; flex-grow: 0;"
                                                       id="vaadinHorizontalLayout3">
-                                <vaadin-button theme="icon" class="btn-1" id="vaadinButton">
+                                <vaadin-button theme="icon" class="btn-1" id="askMeAQ">
                                     ASK ME A QUESTION
                                 </vaadin-button>
                             </vaadin-horizontal-layout>
                             <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"
                                                       id="vaadinHorizontalLayout4">
-                                <vaadin-button theme="primary" class="btn-2" id="vaadinButton1">
+                                <vaadin-button theme="primary" class="btn-2" id="letMeWrite">
                                     LET ME WRITE
                                 </vaadin-button>
                             </vaadin-horizontal-layout>
                             <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"
                                                       id="vaadinHorizontalLayout5">
-                                <vaadin-button theme="primary" class="btn-3" id="vaadinButton2">
+                                <vaadin-button theme="primary" class="btn-3" id="inAMood">
                                     I'M IN A MOOD
                                 </vaadin-button>
                             </vaadin-horizontal-layout>

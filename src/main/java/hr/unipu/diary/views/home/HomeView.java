@@ -14,6 +14,7 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.server.VaadinSession;
 import com.vaadin.flow.templatemodel.TemplateModel;
 import hr.unipu.diary.views.main.MainView;
 import com.vaadin.flow.router.RouteAlias;
@@ -27,9 +28,30 @@ import org.vaadin.alump.materialicons.MaterialIcons;
 public class HomeView extends PolymerTemplate<TemplateModel> {
     @Id("vaadinVerticalLayout")
     private Element vaadinVerticalLayout;
+    @Id("letMeWrite")
+    private Button letMeWrite;
+    @Id("askMeAQ")
+    private Button askMeAQ;
+    @Id("inAMood")
+    private Button inAMood;
 
     public HomeView() {
         vaadinVerticalLayout.getStyle().set("background-image", "url('images/temporay.png')");
-//        Image background = new Image("./frontend/src/images/temporary.png", "Background");
+
+        letMeWrite.addClickListener(e -> {
+            letMeWrite.getUI().ifPresent(ui ->
+                    ui.navigate("editor"));
+        });
+
+        askMeAQ.addClickListener(e -> {
+            askMeAQ.getUI().ifPresent(ui ->
+                    ui.navigate("editor"));
+            VaadinSession.getCurrent().setAttribute("hasQuestion", true);
+        });
+
+        inAMood.addClickListener(e -> {
+            inAMood.getUI().ifPresent(ui ->
+                    ui.navigate("feeling"));
+        });
     }
 }
