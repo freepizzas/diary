@@ -7,6 +7,7 @@ import com.vaadin.flow.component.ComponentUtil;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
@@ -33,6 +34,7 @@ import com.vaadin.flow.theme.lumo.Lumo;
  * The main view is a top-level placeholder for other views.
  */
 @CssImport(value = "./styles/views/main/main-view.css", themeFor = "vaadin-app-layout")
+@StyleSheet("context://fonts/Roboto_Condensed/stylesheet.css")
 @CssImport("./styles/views/main/main-view.css")
 @PWA(name = "diary", shortName = "diary", enableInstallPrompt = false)
 @JsModule("./styles/shared-styles.js")

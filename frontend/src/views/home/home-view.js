@@ -1,5 +1,5 @@
-import { PolymerElement } from '@polymer/polymer/polymer-element.js';
-import { html } from '@polymer/polymer/lib/utils/html-tag.js';
+import {PolymerElement} from '@polymer/polymer/polymer-element.js';
+import {html} from '@polymer/polymer/lib/utils/html-tag.js';
 import '../feeling/feeling-view.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
@@ -18,8 +18,8 @@ class HomeView extends PolymerElement {
           margin-left: auto;
       }
       .header1 {
-          font-family: 'Roboto', 'Noto', sans-serif;
-          font-size: 50px;
+        font-family: 'roboto_condensedbold';
+        font-size: 50px;
           font-weight: 800;
           color: white;
           margin-bottom: -5%;
@@ -31,8 +31,8 @@ class HomeView extends PolymerElement {
           margin-top: 0px;
       }
       .header2 {
-          font-family: 'Roboto', 'Noto', sans-serif;
-          font-size: 50px;
+        font-family: 'roboto_condensedbold';
+        font-size: 50px;
           font-weight: 800;
           color: white;
           text-align: center;
@@ -43,8 +43,8 @@ class HomeView extends PolymerElement {
           
       }
       .btn-1 {
-          font-family: 'Roboto', 'Noto', sans-serif;
-          font-weight: 600;
+        font-family: 'roboto_condensedbold';
+        font-weight: 600;
           margin-left: auto;
           margin-right: auto;
           background-color: #ff4f5a;
@@ -59,8 +59,8 @@ class HomeView extends PolymerElement {
           height: 70px;
       }
       .btn-2 {
-          font-family: 'Roboto', 'Noto', sans-serif;
-          font-weight: 600;
+        font-family: 'roboto_condensedbold';
+        font-weight: 600;
           margin-left: auto;
           margin-right: auto;
           background-color: #ff4f5a;
@@ -74,8 +74,8 @@ class HomeView extends PolymerElement {
           height: 70px;
       }
       .btn-3 {
-          font-family: 'Roboto', 'Noto', sans-serif;
-          font-weight: 600;
+        font-family: 'roboto_condensedbold';
+        font-weight: 600;
           margin-left: auto;
           margin-right: auto;
           background-color: #ff4f5a;
@@ -99,13 +99,13 @@ class HomeView extends PolymerElement {
      <h1 class="header2" id="h11"> WHAT DO YOU WANT TO DO TODAY? </h1>
     </div>
     <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout3">
-     <vaadin-button theme="icon" class="btn-1" id="vaadinButton">
+     <vaadin-button theme="icon" class="btn-1" id="askMeAQ">
        ASK ME A QUESTION 
      </vaadin-button>
-     <vaadin-button theme="primary" class="btn-2" id="vaadinButton1">
+     <vaadin-button theme="primary" class="btn-2" id="letMeWrite">
        LET ME WRITE 
      </vaadin-button>
-     <vaadin-button theme="primary" class="btn-3" id="vaadinButton2">
+     <vaadin-button theme="primary" class="btn-3" id="inAMood">
        I'M IN A MOOD 
      </vaadin-button>
     </vaadin-horizontal-layout>
@@ -117,9 +117,11 @@ class HomeView extends PolymerElement {
 `;
   }
 
-  static get is() {
-    return 'home-view';
-  }
+               
+
+    static get is() {
+        return 'home-view';
+    }
 }
 
 customElements.define(HomeView.is, HomeView);

@@ -7,18 +7,20 @@ class LandingView extends PolymerElement {
 
     static get template() {
         return html`
-<style include="shared-styles">
+            <style include="shared-styles">
                 :host {
                     display: block;
                     height: 100%;
                     /*background-image: url("");*/
                     background-color: gold;
                 }
+
                 .center {
                     margin-right: auto;
                     margin-left: auto;
-                }       
-                .top-text{
+                }
+
+                .top-text {
                     font-family: 'Roboto', 'Noto', sans-serif;
                     font-size: 70px;
                     font-weight: 800;
@@ -27,7 +29,8 @@ class LandingView extends PolymerElement {
                     -webkit-text-stroke-width: 1px;
                     -webkit-text-stroke-color: rebeccapurple;
                 }
-                .mid-text{
+
+                .mid-text {
                     font-family: 'Roboto', 'Noto', sans-serif;
                     font-size: 75px;
                     font-weight: 800;
@@ -35,7 +38,8 @@ class LandingView extends PolymerElement {
                     -webkit-text-stroke-width: 1px;
                     -webkit-text-stroke-color: rebeccapurple;
                 }
-                .bot-text{
+
+                .bot-text {
                     font-family: 'Roboto', 'Noto', sans-serif;
                     font-size: 66px;
                     font-weight: 800;
@@ -45,6 +49,7 @@ class LandingView extends PolymerElement {
                     -webkit-text-stroke-width: 1px;
                     -webkit-text-stroke-color: goldenrod;
                 }
+
                 .btn-center-1 {
                     font-family: 'Roboto', 'Noto', sans-serif;
                     font-weight: 600;

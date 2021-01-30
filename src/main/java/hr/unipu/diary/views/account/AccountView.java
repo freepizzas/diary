@@ -30,10 +30,10 @@ public class AccountView extends PolymerTemplate<TemplateModel> {
     private Element vaadinVerticalLayout;
     @Id("profile-image")
     private Div profileImage;
-    @Id("vaadinButton")
-    private Button vaadinButton;
-    @Id("vaadinButton1")
-    private Button vaadinButton1;
+    @Id("logOut")
+    private Button logOut;
+    @Id("stats")
+    private Button stats;
 
     public AccountView() {
         //Html img = new Html("<img src='images/profile_pic.png'");
