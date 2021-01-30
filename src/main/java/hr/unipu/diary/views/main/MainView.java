@@ -15,9 +15,14 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.TabVariant;
 import com.vaadin.flow.component.tabs.Tabs;
+import com.vaadin.flow.router.BeforeEnterEvent;
+import com.vaadin.flow.router.BeforeEnterObserver;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.PWA;
+import com.vaadin.flow.server.VaadinSession;
 import com.vaadin.flow.theme.Theme;
+import hr.unipu.diary.backend.entity.User;
+import hr.unipu.diary.views.feeling.FeelingView;
 import hr.unipu.diary.views.main.MainView;
 import hr.unipu.diary.views.home.HomeView;
 import hr.unipu.diary.views.history.HistoryView;
@@ -32,7 +37,7 @@ import com.vaadin.flow.theme.lumo.Lumo;
 @PWA(name = "diary", shortName = "diary", enableInstallPrompt = false)
 @JsModule("./styles/shared-styles.js")
 @Theme(value = Lumo.class, variant = Lumo.DARK)
-public class MainView extends AppLayout {
+public class MainView extends AppLayout implements BeforeEnterObserver {
 
     private final Tabs menu;
 
@@ -101,5 +106,12 @@ public class MainView extends AppLayout {
     private Optional<Tab> getTabForComponent(Component component) {
         return menu.getChildren().filter(tab -> ComponentUtil.getData(tab, Class.class).equals(component.getClass()))
                 .findFirst().map(Tab.class::cast);
+    }
+
+    @Override
+    public void beforeEnter(BeforeEnterEvent event) {
+//        if(VaadinSession.getCurrent().getAttribute("access").equals(true)){
+//            event.rerouteTo("");
+//        }
     }
 }

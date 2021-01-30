@@ -23,7 +23,7 @@ import org.vaadin.alump.materialicons.MaterialIcons;
 @PageTitle("Home")
 @JsModule("./src/views/home/home-view.js")
 @Tag("home-view")
-@RouteAlias(value = "", layout = MainView.class)
+@RouteAlias(value = "home", layout = MainView.class)
 public class HomeView extends PolymerTemplate<TemplateModel> {
     @Id("vaadinVerticalLayout")
     private Element vaadinVerticalLayout;
