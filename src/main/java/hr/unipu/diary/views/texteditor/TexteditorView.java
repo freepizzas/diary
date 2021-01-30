@@ -19,6 +19,9 @@ import hr.unipu.diary.views.main.MainView;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.Locale;
 
 @Route(value = "editor", layout = MainView.class)
 @PageTitle("Editor")
@@ -40,12 +43,13 @@ public class TexteditorView extends PolymerTemplate<TexteditorView.TexteditorVie
         var user = VaadinSession.getCurrent().getAttribute(User.class);
 
                 save.addClickListener(e -> {
-                            LocalTime time = LocalTime.now();
+                            String time = LocalTime.now().truncatedTo(ChronoUnit.SECONDS).format(DateTimeFormatter.ISO_LOCAL_TIME);
                             LocalDate date = LocalDate.now();
+                            String longFormat = date.format(DateTimeFormatter.ofPattern("d. MMMM yyyy"));
                             var rt = richtext.getHtmlValue();
                             //var user = VaadinSession.getCurrent().getAttribute(User.class);
 //                            var question = VaadinSession.getCurrent().getAttribute("hasQuestion");
-                            TextEntry entry = new TextEntry(user.getUsername(), String.valueOf(time), String.valueOf(date), rt);
+                            TextEntry entry = new TextEntry(user.getUsername(), time, longFormat, rt);
                             textEntryService.save(entry);
                         }
 

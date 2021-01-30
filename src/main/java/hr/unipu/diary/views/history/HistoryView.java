@@ -1,9 +1,7 @@
 package hr.unipu.diary.views.history;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.accordion.Accordion;
@@ -46,6 +44,7 @@ public class HistoryView extends PolymerTemplate<HistoryViewModel> {
 
     public HistoryView(TextEntryRepository textEntryRepository) {
         List<TextEntry> text = textEntryRepository.findAll();
+        Collections.reverse(text);
         List<TextEntry> entries = text;
         getModel().setItems(entries);
     }
