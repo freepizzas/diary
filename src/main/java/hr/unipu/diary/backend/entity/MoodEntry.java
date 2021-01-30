@@ -9,19 +9,18 @@ import java.time.LocalTime;
 public class MoodEntry extends AbstractEntity {
 
     @NotNull
-    @OneToOne(cascade = CascadeType.ALL)
-    private User user;
+    private String user;
 
     @NotNull
     private int rating;
 
     @NotNull
-    private LocalDate date;
+    private String date;
 
     @NotNull
-    private LocalTime time;
+    private String time;
 
-    public MoodEntry(User createdBy, @NotNull User user, int rating, LocalTime time, LocalDate date) {
+    public MoodEntry(String createdBy, int rating, String time, String date) {
         setUser(createdBy);
         setRating(rating);
         setTime(time);
@@ -31,27 +30,27 @@ public class MoodEntry extends AbstractEntity {
     public MoodEntry() {
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public LocalTime getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(LocalTime time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
-    public User getUser() {
+    public String getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(String user) {
         this.user = user;
     }
 

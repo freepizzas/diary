@@ -50,6 +50,8 @@ public class TexteditorqView extends PolymerTemplate<TexteditorqView.Texteditorq
 //                            var question = VaadinSession.getCurrent().getAttribute("hasQuestion");
                     TextEntry entry = new TextEntry(user.getUsername(), time, longFormat, rtString);
                     textEntryService.save(entry);
+                    save.getUI().ifPresent(ui ->
+                            ui.navigate("home"));
                 }
 
         );

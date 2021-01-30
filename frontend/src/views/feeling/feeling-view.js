@@ -122,27 +122,27 @@ class FeelingView extends PolymerElement {
  <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout1">
   <vaadin-horizontal-layout theme="spacing" style="width: 100%;" class="centered" id="vaadinHorizontalLayout2">
    <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout1" style="align-self: center;">
-    <vaadin-button id="vaadinButton" class="btn1">
+    <vaadin-button id="reallySad" class="btn1">
       I FEEL REALLY SAD 
     </vaadin-button>
    </vaadin-vertical-layout>
    <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout2" style="align-self: center;">
-    <vaadin-button id="vaadinButton1" class="btn2">
+    <vaadin-button id="sad" class="btn2">
       I FEEL SAD 
     </vaadin-button>
    </vaadin-vertical-layout>
    <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout3" style="align-self: center;">
-    <vaadin-button id="vaadinButton2" class="btn3">
+    <vaadin-button id="ok" class="btn3">
       I FEEL OK 
     </vaadin-button>
    </vaadin-vertical-layout>
    <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout4" style="align-self: center;">
-    <vaadin-button id="vaadinButton3" class="btn4">
+    <vaadin-button id="nice" class="btn4">
       I FEEL NICE 
     </vaadin-button>
    </vaadin-vertical-layout>
    <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout5" style="align-self: center;">
-    <vaadin-button id="vaadinButton4" class="btn5">
+    <vaadin-button id="reallyNice" class="btn5">
       I FEEL REALLY NICE 
     </vaadin-button>
    </vaadin-vertical-layout>

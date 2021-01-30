@@ -11,10 +11,13 @@ import com.vaadin.flow.templatemodel.TemplateModel;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
+import hr.unipu.diary.backend.entity.MoodEntry;
 import hr.unipu.diary.backend.entity.TextEntry;
 import hr.unipu.diary.backend.entity.User;
 import hr.unipu.diary.backend.repository.TextEntryRepository;
+import hr.unipu.diary.backend.service.MoodEntryService;
 import hr.unipu.diary.backend.service.TextEntryService;
+import hr.unipu.diary.views.feeling.FeelingView;
 import hr.unipu.diary.views.main.MainView;
 import org.jsoup.Jsoup;
 
@@ -36,13 +39,12 @@ public class TexteditorView extends PolymerTemplate<TexteditorView.TexteditorVie
     private Button save;
     @Id("richtext")
     private RichTextEditor richtext;
+    @Id("feelingView")
+    private FeelingView feelingView;
 
-    public TexteditorView(TextEntryService textEntryService) {
-
+    public TexteditorView(TextEntryService textEntryService, MoodEntryService moodEntryService) {
         vaadinVerticalLayout.getStyle().set("background-image", "url('images/editor.png')");
-        var hasQuestion = VaadinSession.getCurrent().getAttribute("hasQuestion");
         var user = VaadinSession.getCurrent().getAttribute(User.class);
-
                 save.addClickListener(e -> {
                             String time = LocalTime.now().truncatedTo(ChronoUnit.SECONDS).format(DateTimeFormatter.ISO_LOCAL_TIME);
                             LocalDate date = LocalDate.now();
@@ -51,8 +53,12 @@ public class TexteditorView extends PolymerTemplate<TexteditorView.TexteditorVie
                             var rtString = Jsoup.parse(rt).text();
                             TextEntry entry = new TextEntry(user.getUsername(), time, longFormat, rtString);
                             textEntryService.save(entry);
+                            var mood = VaadinSession.getCurrent().getAttribute("mood");
+                            MoodEntry moodEntry = new MoodEntry(user.getUsername(), ((Integer) mood).intValue(), time, longFormat);
+                            moodEntryService.save(moodEntry);
+                            save.getUI().ifPresent(ui ->
+                            ui.navigate("home"));
                         }
-
                 );
     }
 
