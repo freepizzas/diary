@@ -63,10 +63,10 @@ public class MainView extends AppLayout {
         Image logo = new Image("images/logo.png", "diary logo");
         logo.setId("logo");
         header.add(logo);
-        Image avatar = new Image("images/user.svg", "Avatar");
-        avatar.setId("avatar");
-        header.add(new H1("diary"));
-        header.add(avatar);
+//        Image avatar = new Image("images/user.svg", "Avatar");
+//        avatar.setId("avatar");
+//        header.add(new H1("Diary"));
+//        header.add(avatar);
         return header;
     }
 
@@ -78,7 +78,9 @@ public class MainView extends AppLayout {
     }
 
     private static Tab[] getAvailableTabs() {
-        return new Tab[]{createTab("Home", HomeView.class), createTab("History", HistoryView.class),
+        return new Tab[]{
+                createTab("Home", HomeView.class),
+                createTab("History", HistoryView.class),
                 createTab("Account", AccountView.class)};
     }
 

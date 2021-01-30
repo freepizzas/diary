@@ -3,7 +3,6 @@ import { html } from '@polymer/polymer/lib/utils/html-tag.js';
 import '../feeling/feeling-view.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
-import '../navbar/navbar-view.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 
 class HomeView extends PolymerElement {
@@ -13,7 +12,6 @@ class HomeView extends PolymerElement {
       :host {
         display: block;
         height: 100%;
-        padding: 1em;
       }
       .center {
           margin-right: auto;
@@ -39,13 +37,13 @@ class HomeView extends PolymerElement {
           font-weight: 600;
           margin-left: auto;
           margin-right: auto;
-          background-color: yellow;
+          background-color: white;
           color: black;
           display: block;
           text-align: center;
           text-decoration: none;
           font-size: 26px;
-          border-radius: 3px;
+          border-radius: 25px;
           border: 2px solid black;
           line-height: 1;
       }
@@ -54,12 +52,12 @@ class HomeView extends PolymerElement {
           font-weight: 600;
           margin-left: auto;
           margin-right: auto;
-          background-color: yellow;
+          background-color: white;
           color: black;
           text-align: center;
           text-decoration: none;
           font-size: 26px;
-          border-radius: 3px;
+          border-radius: 25px;
           border: 2px solid black;
           line-height: 1;
       }
@@ -68,20 +66,17 @@ class HomeView extends PolymerElement {
           font-weight: 600;
           margin-left: auto;
           margin-right: auto;
-          background-color: yellow;
+          background-color: white;
           color: black;
           text-align: center;
           text-decoration: none;
           font-size: 26px;
-          border-radius: 3px;
+          border-radius: 25px;
           border: 2px solid black;
           line-height: 1;
       }  
 </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout">
-  <navbar-view id="navbarView"></navbar-view>
- </vaadin-horizontal-layout>
  <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinVerticalLayout1">
   <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout1">
    <vaadin-vertical-layout theme="spacing" class="center" id="vaadinVerticalLayout2">
@@ -92,7 +87,7 @@ class HomeView extends PolymerElement {
      </div>
     </vaadin-horizontal-layout>
     <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; flex-grow: 0;" id="vaadinHorizontalLayout3">
-     <vaadin-button theme="primary" class="btn-1" id="vaadinButton">
+     <vaadin-button theme="icon" class="btn-1" id="vaadinButton">
        ASK ME A QUESTION 
      </vaadin-button>
     </vaadin-horizontal-layout>
@@ -109,8 +104,6 @@ class HomeView extends PolymerElement {
    </vaadin-vertical-layout>
   </vaadin-horizontal-layout>
  </vaadin-vertical-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout6"></vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout7"></vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;
   }

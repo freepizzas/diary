@@ -25,81 +25,42 @@ class HistoryView extends PolymerElement {
         vaadin-grid-cell-content {
           background-color: var(--lumo-contrast-10pct);
         }
-
-        .card {
-          background-color: var(--lumo-base-color);
-          border-radius: var(--lumo-border-radius);
-          box-shadow: var(--lumo-box-shadow-xs);
-          padding: calc(var(--lumo-space-s) * 1.5) var(--lumo-space-m);
-        }
-
-        img {
-          border-radius: 50%;
-          flex-shrink: 0;
-          height: var(--lumo-size-m);
-          width: var(--lumo-size-m);
-        }
-
         .header {
           align-items: baseline;
         }
-
-        .name {
-          font-size: var(--lumo-font-size-s);
-          font-weight: bold;
-        }
-
-        .date {
-          color: var(--lumo-tertiary-text-color);
-          font-size: var(--lumo-font-size-xs);
-        }
-
-        .post {
-          color: var(--lumo-secondary-text-color);
-          font-size: var(--lumo-font-size-s);
-          margin-bottom: var(--lumo-space-s);
-          white-space: normal;
-        }
-
         .actions {
           align-items: center;
         }
-
-        iron-icon {
-          color: var(--lumo-tertiary-text-color);
-          height: calc(var(--lumo-icon-size-s) * 0.8);
-          width: calc(var(--lumo-icon-size-s) * 0.8);
+        .centered {
+            margin-left: auto;
+            margin-right: auto;
         }
-
-        .likes,
-        .comments,
-        .shares {
-          color: var(--lumo-tertiary-text-color);
-          font-size: var(--lumo-font-size-xs);
-          margin-right: var(--lumo-space-l);
+        vaadin-text-area {
+            min-height: 150px;
+            min-width: 600px;
+        }
+        vaadin-grid-cell-content {
+            padding-left: 36%;
         }
       </style>
-<vaadin-grid id="grid" theme="no-border no-row-borders" items="[[items]]">
+<vaadin-grid id="grid" items="[[items]]">
  <vaadin-grid-column id="vaadinGridColumn">
   <template>
-   <vaadin-horizontal-layout theme="spacing-s" class="card" id="vaadinHorizontalLayout">
-    <img src="[[item.image]]">
-    <vaadin-vertical-layout>
-     <vaadin-horizontal-layout theme="spacing-s" class="header">
-      <span class="name">[[item.name]]</span>
-      <span class="date">[[item.date]]</span>
-     </vaadin-horizontal-layout>
-     <span class="post">[[item.post]]</span>
-     <vaadin-horizontal-layout theme="spacing-s" class="actions">
-      <iron-icon icon="vaadin:heart"></iron-icon>
-      <span class="likes">[[item.likes]]</span>
-      <iron-icon icon="vaadin:comment"></iron-icon>
-      <span class="comments">[[item.comments]]</span>
-      <iron-icon icon="vaadin:connect"></iron-icon>
-      <span class="shares">[[item.shares]]</span>
-     </vaadin-horizontal-layout>
-    </vaadin-vertical-layout>
-   </vaadin-horizontal-layout>
+   <vaadin-accordion id="vaadinAccordion">
+    <vaadin-accordion-panel id="vaadinAccordionPanel">
+     <div slot="summary" id="div">
+       Date 
+      <!-- [[item.date]] -->
+      <!-- [[item.time]] -->
+     </div>
+     <vaadin-vertical-layout id="vaadinVerticalLayout">
+      <vaadin-text-area id="name">
+        Text 
+       <!-- [[item.rtext]] -->
+      </vaadin-text-area>
+     </vaadin-vertical-layout>
+    </vaadin-accordion-panel>
+   </vaadin-accordion>
   </template>
  </vaadin-grid-column>
 </vaadin-grid>

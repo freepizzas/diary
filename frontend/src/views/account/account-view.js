@@ -1,6 +1,10 @@
 import { PolymerElement } from '@polymer/polymer/polymer-element.js';
 import { html } from '@polymer/polymer/lib/utils/html-tag.js';
 import '../history/history-view.js';
+import '@vaadin/flow-frontend/com/github/appreciated/card/stateful-card.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
+import '@vaadin/vaadin-button/src/vaadin-button.js';
 
 class AccountView extends PolymerElement {
   static get template() {
@@ -8,15 +12,34 @@ class AccountView extends PolymerElement {
 <style>
       :host {
         display: block;
-        padding: 1em;
+        height: 100%;
+      }
+      .centered {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
       }
       </style>
-<vaadin-button id="sayHello">
- Say hello
-</vaadin-button>
-<history-view></history-view>
-<history-view></history-view>
-<history-view></history-view>
+<vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
+ <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 40%;"></vaadin-horizontal-layout>
+ <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
+  <vaadin-vertical-layout theme="spacing" class="centered">
+   <div id="profile-image" class="centered">
+   </div>
+   <div>
+    <vaadin-button id="vaadinButton">
+      Button 
+    </vaadin-button>
+   </div>
+   <div>
+    <vaadin-button id="vaadinButton1">
+      Button 
+    </vaadin-button>
+   </div>
+  </vaadin-vertical-layout>
+ </vaadin-horizontal-layout>
+ <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 40%;"></vaadin-horizontal-layout>
+</vaadin-vertical-layout>
 `;
   }
 

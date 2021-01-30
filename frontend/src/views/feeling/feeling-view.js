@@ -37,25 +37,19 @@ class FeelingView extends PolymerElement {
  <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout1">
   <vaadin-horizontal-layout theme="spacing" style="width: 100%;" class="centered" id="vaadinHorizontalLayout2">
    <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout1">
-    <!--   Prvi icon-->
-    <vaadin-button theme="icon" aria-label="Add new" id="vaadinButton">
-     <iron-icon id="button"></iron-icon>
-    </vaadin-button>
-    <vaadin-button theme="icon" aria-label="Add new">
-     <iron-icon icon="lumo:plus"></iron-icon>
-    </vaadin-button>
+     Loše 
    </vaadin-vertical-layout>
    <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout2">
-    <!--   Drugi icon-->
+     Meh 
    </vaadin-vertical-layout>
    <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout3">
-    <!--   Treci icon-->
+     Ok 
    </vaadin-vertical-layout>
    <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout4">
-    <!--   Cetvrti icon-->
+     Dobro 
    </vaadin-vertical-layout>
    <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout5">
-    <!--   Peti icon-->
+     Super 
    </vaadin-vertical-layout>
   </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
