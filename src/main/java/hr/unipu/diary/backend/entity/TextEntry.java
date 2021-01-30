@@ -9,14 +9,13 @@ import java.time.LocalTime;
 public class TextEntry extends AbstractEntity {
 
     @NotNull
-    @OneToOne(cascade = CascadeType.ALL)
-    private User user;
+    private String user;
 
     @NotNull
-    private LocalDate date;
+    private String date;
 
     @NotNull
-    private LocalTime time;
+    private String time;
 
     @NotNull
     private String rtext;
@@ -27,7 +26,7 @@ public class TextEntry extends AbstractEntity {
 
     }
 
-    public TextEntry(User createdBy, LocalTime time, LocalDate date, String rtext, String question) {
+    public TextEntry(String createdBy, String time, String date, String rtext, String question) {
         setUser(createdBy);
         setTime(time);
         setDate(date);
@@ -35,27 +34,34 @@ public class TextEntry extends AbstractEntity {
         setQuestion(question);
     }
 
-    public LocalDate getDate() {
+    public TextEntry(String createdBy, String time, String date, String rtext) {
+        setUser(createdBy);
+        setTime(time);
+        setDate(date);
+        setRtext(rtext);
+    }
+
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public LocalTime getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(LocalTime time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
-    public User getUser() {
+    public String getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(String user) {
         this.user = user;
     }
 

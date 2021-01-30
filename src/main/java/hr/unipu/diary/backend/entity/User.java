@@ -14,7 +14,6 @@ public class User extends AbstractEntity {
     private String username;
     private String passwordSalt;
     private String passwordHash;
-    private String name;
     private Role role;
 
     public User() {
@@ -53,14 +52,6 @@ public class User extends AbstractEntity {
 
     public void setPasswordHash(String passwordHash) {
         this.passwordHash = passwordHash;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Role getRole() {

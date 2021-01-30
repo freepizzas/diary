@@ -60,13 +60,11 @@ class HistoryView extends PolymerElement {
    <vaadin-accordion id="vaadinAccordion">
     <vaadin-accordion-panel id="vaadinAccordionPanel" items="[[items]]">
      <div slot="summary" id="div" class="makeitblack">
-       [[item.date]] 
-       [[item.time]] 
+       [[item.date]]
      </div>
      <vaadin-vertical-layout id="vaadinVerticalLayout">
       <vaadin-text-area id="name">
-        Text 
-       <!-- [[item.rtext]] -->
+        [[item.rtext]]
       </vaadin-text-area>
      </vaadin-vertical-layout>
     </vaadin-accordion-panel>

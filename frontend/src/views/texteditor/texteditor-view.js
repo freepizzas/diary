@@ -51,8 +51,8 @@ class TexteditorView extends PolymerElement {
   <!-- Tu ide mood ili ask me a question-->
  </vaadin-horizontal-layout>
  <vaadin-vertical-layout style="height: 100%; width:100%;" class="background">
-  <vaadin-rich-text-editor class="editor" html-value="<p><br></p>"></vaadin-rich-text-editor>
-  <vaadin-button class="btn">
+  <vaadin-rich-text-editor class="editor" html-value="<p><br></p>" id="richtext"></vaadin-rich-text-editor>
+  <vaadin-button class="btn" id="save">
     Save 
   </vaadin-button>
  </vaadin-vertical-layout>
