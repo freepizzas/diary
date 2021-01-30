@@ -29,7 +29,7 @@ public class HomeView extends PolymerTemplate<TemplateModel> {
     private Element vaadinVerticalLayout;
 
     public HomeView() {
-        vaadinVerticalLayout.getStyle().set("background-image", "url('images/temporay.png')");
+        vaadinVerticalLayout.getStyle().set("background-image", "url('images/tea.jpg')");
 //        Image background = new Image("./frontend/src/images/temporary.png", "Background");
     }
 }

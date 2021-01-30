@@ -56,6 +56,7 @@ public class HistoryView extends PolymerTemplate<HistoryViewModel> implements Af
     }
     //        name.setEnabled(false);
     public HistoryView() {
+
     }
     //        List<TextEntry> entries = Arrays.asList();
     @Override

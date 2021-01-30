@@ -25,7 +25,7 @@ class LandingView extends PolymerElement {
                     margin-bottom: -15%;
                     color: white;
                     -webkit-text-stroke-width: 1px;
-                    -webkit-text-stroke-color: goldenrod;
+                    -webkit-text-stroke-color: rebeccapurple;
                 }
                 .mid-text{
                     font-family: 'Roboto', 'Noto', sans-serif;
@@ -33,13 +33,14 @@ class LandingView extends PolymerElement {
                     font-weight: 800;
                     color: white;
                     -webkit-text-stroke-width: 1px;
-                    -webkit-text-stroke-color: goldenrod;
+                    -webkit-text-stroke-color: rebeccapurple;
                 }
                 .bot-text{
                     font-family: 'Roboto', 'Noto', sans-serif;
                     font-size: 66px;
                     font-weight: 800;
                     margin-top: -12%;
+                    margin-bottom: -5%;
                     color: white;
                     -webkit-text-stroke-width: 1px;
                     -webkit-text-stroke-color: goldenrod;
@@ -47,17 +48,20 @@ class LandingView extends PolymerElement {
                 .btn-center-1 {
                     font-family: 'Roboto', 'Noto', sans-serif;
                     font-weight: 600;
-                    background-color: mediumpurple;
+                    background-color: rebeccapurple;
                     border: 1px rebeccapurple;
                     color: white;
                     text-align: center;
                     text-decoration: none;
                     display: inline-block;
                     font-size: 26px;
-                    border-radius: 3px;             
+                    height: 60px;
+                    width: 250px;
+                    border-radius: 25px;
+                    opacity: 1;          
                 }                
             </style>
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
+<vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout">
  <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
  <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
  <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; justify-content: center;">
