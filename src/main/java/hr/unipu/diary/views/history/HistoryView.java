@@ -5,7 +5,9 @@ import java.util.*;
 
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
+import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.templatemodel.TemplateModel;
@@ -20,11 +22,18 @@ import hr.unipu.diary.views.main.MainView;
 @Tag("history-view")
 public class HistoryView extends PolymerTemplate<HistoryViewModel> {
 
+    @Id("vaadinVerticalLayout1")
+    private Element vaadinVerticalLayout1;
+    @Id("vaadinVerticalLayout2")
+    private Element vaadinVerticalLayout2;
+
     public static interface HistoryViewModel extends TemplateModel {
         public void setItems(List<TextEntry> items);
     }
 
     public HistoryView(TextEntryRepository textEntryRepository) {
+        vaadinVerticalLayout1.getStyle().set("background-image", "url('images/bookleft.png')");
+        vaadinVerticalLayout2.getStyle().set("background-image", "url('images/bookright.png')");
         List<TextEntry> text = textEntryRepository.findAll();
         Collections.reverse(text);
         List<TextEntry> entries = text;

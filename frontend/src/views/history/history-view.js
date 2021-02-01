@@ -68,7 +68,7 @@ class HistoryView extends PolymerElement {
         }
       </style>
 <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
- <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;" class="outer"></vaadin-vertical-layout>
+ <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;" class="outer" id="vaadinVerticalLayout1"></vaadin-vertical-layout>
  <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;" class="centered">
   <vaadin-grid id="grid" items="[[items]]">
    <vaadin-grid-column id="vaadinGridColumn">
@@ -96,7 +96,7 @@ class HistoryView extends PolymerElement {
    </vaadin-grid-column>
   </vaadin-grid>
  </vaadin-vertical-layout>
- <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;" class="outer"></vaadin-vertical-layout>
+ <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;" class="outer" id="vaadinVerticalLayout2"></vaadin-vertical-layout>
 </vaadin-horizontal-layout>
 `;
   }

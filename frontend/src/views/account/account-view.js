@@ -35,14 +35,15 @@ class AccountView extends PolymerElement {
                     color: white;
                     margin-left: auto;
                     margin-right: auto;
-                    height: 50px;
-                    width: 150px;
+                    height: 60px;
+                    width: 180px;
                     font-weight: 600;
+                    font-size: 20px;
                 }
                 .center1 {
                     margin-left: auto;
                     margin-right: auto;
-                    margin-top: 0px;
+                    margin-top: 30px;
                     margin-bottom: 10px;
                 }
                 .center2 {
