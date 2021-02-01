@@ -44,23 +44,26 @@ public class TexteditorView extends PolymerTemplate<TexteditorView.TexteditorVie
     public TexteditorView(TextEntryService textEntryService, MoodEntryService moodEntryService) {
         vaadinVerticalLayout.getStyle().set("background-image", "url('images/editor.png')");
         var user = VaadinSession.getCurrent().getAttribute(User.class);
-                save.addClickListener(e -> {
-                            String time = LocalTime.now().truncatedTo(ChronoUnit.SECONDS).format(DateTimeFormatter.ISO_LOCAL_TIME);
-                            LocalDate date = LocalDate.now();
-                            String longFormat = date.format(DateTimeFormatter.ofPattern("d. MMMM yyyy"));
-                            var rt = richtext.getHtmlValue();
-                            var rtString = Jsoup.parse(rt).text();
-                            TextEntry entry = new TextEntry(user.getUsername(), time, longFormat, rtString);
-                            textEntryService.save(entry);
-                            var mood = VaadinSession.getCurrent().getAttribute("mood");
-                            if(mood != null){
-                                MoodEntry moodEntry = new MoodEntry(user.getUsername(), ((Integer) mood).intValue(), time, longFormat);
-                                moodEntryService.save(moodEntry);
-                            }
-                            save.getUI().ifPresent(ui ->
-                            ui.navigate("home"));
-                        }
-                );
+        save.addClickListener(e -> {
+                    String time = LocalTime.now().truncatedTo(ChronoUnit.SECONDS).format(DateTimeFormatter.ISO_LOCAL_TIME);
+                    LocalDate date = LocalDate.now();
+                    String longFormat = date.format(DateTimeFormatter.ofPattern("d. MMMM yyyy"));
+                    var mood = VaadinSession.getCurrent().getAttribute("mood");
+                    if (mood != null) {
+                        MoodEntry moodEntry = new MoodEntry(user.getUsername(), ((Integer) mood).intValue(), time, longFormat);
+                        moodEntryService.save(moodEntry);
+                    }
+                    var rt = richtext.getHtmlValue();
+                    if (rt != null) {
+                        var rtString = Jsoup.parse(rt).text();
+                        TextEntry entry = new TextEntry(user.getUsername(), time, longFormat, rtString);
+                        textEntryService.save(entry);
+
+                        save.getUI().ifPresent(ui ->
+                                ui.navigate("home"));
+                    }
+                }
+        );
     }
 
     public interface TexteditorViewModel extends TemplateModel {

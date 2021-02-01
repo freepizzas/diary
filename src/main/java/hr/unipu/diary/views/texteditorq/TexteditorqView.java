@@ -32,17 +32,18 @@ import java.util.Random;
 @JsModule("./src/views/texteditorq/texteditorq-view.js")
 public class TexteditorqView extends PolymerTemplate<TexteditorqView.TexteditorqViewModel> {
 
+    String question;
     @Id("vaadinVerticalLayout")
     private Element vaadinVerticalLayout;
     @Id("save")
     private Button save;
     @Id("richtext")
     private RichTextEditor richtext;
-    String question;
+
     public TexteditorqView(TextEntryService textEntryService) {
         vaadinVerticalLayout.getStyle().set("background-image", "url('images/editor.png')");
         var hasQuestion = VaadinSession.getCurrent().getAttribute("hasQuestion");
-        if(((Boolean) hasQuestion).booleanValue()){
+        if (((Boolean) hasQuestion).booleanValue()) {
             question = getQuestions();
             getModel().setItems(question);
         }
@@ -53,11 +54,15 @@ public class TexteditorqView extends PolymerTemplate<TexteditorqView.Texteditorq
                     LocalDate date = LocalDate.now();
                     String longFormat = date.format(DateTimeFormatter.ofPattern("d. MMMM yyyy"));
                     var rt = richtext.getHtmlValue();
-                    var rtString = Jsoup.parse(rt).text();
-                    TextEntry entry = new TextEntry(user.getUsername(), time, longFormat, rtString, question);
-                    textEntryService.save(entry);
-                    save.getUI().ifPresent(ui ->
-                            ui.navigate(""));
+                    if (rt != null) {
+                        var rtString = Jsoup.parse(rt).text();
+                        TextEntry entry = new TextEntry(user.getUsername(), time, longFormat, rtString, question);
+                        textEntryService.save(entry);
+
+                        save.getUI().ifPresent(ui ->
+                                ui.navigate("home"));
+                    }
+
                 }
         );
     }

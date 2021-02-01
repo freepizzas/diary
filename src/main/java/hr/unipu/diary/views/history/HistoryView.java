@@ -5,6 +5,7 @@ import java.util.*;
 
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.dom.Element;
@@ -26,7 +27,9 @@ public class HistoryView extends PolymerTemplate<HistoryViewModel> {
     private Element vaadinVerticalLayout1;
     @Id("vaadinVerticalLayout2")
     private Element vaadinVerticalLayout2;
-
+    @Id("isNone")
+    private Div isNone;
+    
     public static interface HistoryViewModel extends TemplateModel {
         public void setItems(List<TextEntry> items);
     }
@@ -35,8 +38,16 @@ public class HistoryView extends PolymerTemplate<HistoryViewModel> {
         vaadinVerticalLayout1.getStyle().set("background-image", "url('images/bookleft.png')");
         vaadinVerticalLayout2.getStyle().set("background-image", "url('images/bookright.png')");
         List<TextEntry> text = textEntryRepository.findAll();
-        Collections.reverse(text);
-        List<TextEntry> entries = text;
-        getModel().setItems(entries);
+        if (!text.isEmpty()) {
+            isNone.setVisible(false);
+            Collections.reverse(text);
+            List<TextEntry> entries = text;
+            getModel().setItems(entries);
+        } else isNone.setVisible(true);
+
+    }
+
+    public static interface HistoryViewModel extends TemplateModel {
+        public void setItems(List<TextEntry> items);
     }
 }
