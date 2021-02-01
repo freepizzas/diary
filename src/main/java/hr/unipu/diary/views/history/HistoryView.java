@@ -5,6 +5,8 @@ import java.util.*;
 
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
@@ -20,14 +22,21 @@ import hr.unipu.diary.views.main.MainView;
 @Tag("history-view")
 public class HistoryView extends PolymerTemplate<HistoryViewModel> {
 
-    public static interface HistoryViewModel extends TemplateModel {
-        public void setItems(List<TextEntry> items);
-    }
+    @Id("isNone")
+    private Div isNone;
 
     public HistoryView(TextEntryRepository textEntryRepository) {
         List<TextEntry> text = textEntryRepository.findAll();
-        Collections.reverse(text);
-        List<TextEntry> entries = text;
-        getModel().setItems(entries);
+        if (!text.isEmpty()) {
+            isNone.setVisible(false);
+            Collections.reverse(text);
+            List<TextEntry> entries = text;
+            getModel().setItems(entries);
+        } else isNone.setVisible(true);
+
+    }
+
+    public static interface HistoryViewModel extends TemplateModel {
+        public void setItems(List<TextEntry> items);
     }
 }
