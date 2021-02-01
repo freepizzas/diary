@@ -78,11 +78,16 @@ public class StatsView extends PolymerTemplate<StatsView.StatsViewModel> {
 
             //LineChart configuration
             ListSeries listSeries = new ListSeries("", moodsLine);
+            YAxis yAxis = new YAxis();
+            Labels xlabels = yAxis.getLabels();
+            xlabels.setStep(1);
+            yAxis.setTitle("");
             XAxis xaxis = new XAxis();
             String[] arr = {};
             arr = datesLine.toArray(arr);
             xaxis.setCategories(arr);
             moodChart.getConfiguration().addxAxis(xaxis);
+            moodChart.getConfiguration().addyAxis(yAxis);
             moodChart.getConfiguration().addSeries(listSeries);
 
         } else {
