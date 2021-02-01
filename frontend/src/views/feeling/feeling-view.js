@@ -39,6 +39,8 @@ class FeelingView extends PolymerElement {
                     border: 3px solid white;
                     line-height: 1;
                     height: 70px;
+                    width: 280px;
+                    margin-left: 20px;
                 }
                 .btn2 {
                     font-family: 'Roboto', 'Noto', sans-serif;
@@ -53,6 +55,7 @@ class FeelingView extends PolymerElement {
                     border: 3px solid white;
                     line-height: 1;
                     height: 70px;
+                    width: 280px;
                 }
                 .btn3 {
                     font-family: 'Roboto', 'Noto', sans-serif;
@@ -67,6 +70,7 @@ class FeelingView extends PolymerElement {
                     border: 3px solid white;
                     line-height: 1;
                     height: 70px;
+                    width: 280px;
                 }
                 .btn4 {
                     font-family: 'Roboto', 'Noto', sans-serif;
@@ -81,6 +85,7 @@ class FeelingView extends PolymerElement {
                     border: 3px solid white;
                     line-height: 1;
                     height: 70px;
+                    width: 280px;
                 }
                 .btn5 {
                     font-family: 'Roboto', 'Noto', sans-serif;
@@ -95,20 +100,7 @@ class FeelingView extends PolymerElement {
                     border: 3px solid white;
                     line-height: 1;
                     height: 70px;
-                }
-                .btn6 {
-                    font-family: 'Roboto', 'Noto', sans-serif;
-                    font-weight: 600;
-                    background-color: #ff4f5a;
-                    color: white;
-                    display: block;
-                    text-align: center;
-                    text-decoration: none;
-                    font-size: 20px;
-                    border-radius: 25px;
-                    border: 3px solid white;
-                    line-height: 1;
-                    height: 70px;
+                    width: 280px;
                 }
                 .icon-spacing {
                     margin-left: auto;
