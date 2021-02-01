@@ -60,8 +60,9 @@ public class TexteditorqView extends PolymerTemplate<TexteditorqView.Texteditorq
                         textEntryService.save(entry);
 
                         save.getUI().ifPresent(ui ->
-                                ui.navigate(""));
+                                ui.navigate("home"));
                     }
+
                 }
         );
     }
