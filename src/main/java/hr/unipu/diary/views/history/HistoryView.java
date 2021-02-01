@@ -46,8 +46,4 @@ public class HistoryView extends PolymerTemplate<HistoryViewModel> {
         } else isNone.setVisible(true);
 
     }
-
-    public static interface HistoryViewModel extends TemplateModel {
-        public void setItems(List<TextEntry> items);
-    }
 }
