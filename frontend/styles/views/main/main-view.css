@@ -23,16 +23,12 @@ vaadin-vertical-layout {
   font-family: 'Roboto', 'Noto', sans-serif;
   font-weight: 600;
   font-size: 20px;
-  color: white !important;
 }
 html {
   --lumo-primary-text-color: white;
   --lumo-primary-color: #287cf7;
   font-family: 'Roboto', 'Noto', sans-serif;
-  color: white !important;
-}
-:host {
-  color: white !important;
+  color: black !important;
 }
 
           /*hsl(265, 90%, 52%);*/

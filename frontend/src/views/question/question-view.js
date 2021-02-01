@@ -25,10 +25,6 @@ class QuestionView extends PolymerElement {
                     padding: 20px 20px 20px 20px;
                     border-radius: 25px;
                     font-family: 'Roboto', 'Noto', sans-serif;
-                    /*text-decoration: underline;*/
-                    /*text-decoration-color: #6f7680;*/
-                    /*text-underline-offset: 5px;*/
-                    /*#4d5157*/
                     color: #6f7680;
                     font-size: 25px;
                     font-weight: 600;

@@ -6,7 +6,7 @@ const $_documentContainer = document.createElement('template');
 $_documentContainer.innerHTML = `
 <custom-style>
 <style>
-    
+
 </style>
 </custom-style>
 
