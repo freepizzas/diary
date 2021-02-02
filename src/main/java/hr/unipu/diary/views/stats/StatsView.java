@@ -1,5 +1,6 @@
 package hr.unipu.diary.views.stats;
 
+import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.component.charts.Chart;
@@ -34,6 +35,8 @@ public class StatsView extends PolymerTemplate<StatsView.StatsViewModel> {
     private Element vaadinVerticalLayout;
     @Id("vaadinVerticalLayout1")
     private Element vaadinVerticalLayout1;
+    @Id("isNone")
+    private Div isNone;
 
     public StatsView(MoodEntryRepository moodEntryRepository) {
         vaadinVerticalLayout.getStyle().set("background-image", "url('images/fox_left.png')");
@@ -48,6 +51,7 @@ public class StatsView extends PolymerTemplate<StatsView.StatsViewModel> {
         int rating = 0, countReallySad = 0, countSad = 0, countOk = 0, countNice = 0, countReallyNice = 0;
 
         if (!moods.isEmpty()) {
+            isNone.setVisible(false);
             moodChart.setVisible(true);
             pieChart.setVisible(true);
             for (int i = 0; i < moods.size(); i++) {
@@ -98,6 +102,7 @@ public class StatsView extends PolymerTemplate<StatsView.StatsViewModel> {
         } else {
             moodChart.setVisible(false);
             pieChart.setVisible(false);
+            isNone.setVisible(true);
         }
     }
 
