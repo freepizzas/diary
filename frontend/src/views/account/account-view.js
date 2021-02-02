@@ -22,6 +22,7 @@ class AccountView extends PolymerElement {
                     border-radius: 25px;
                     border: 2px solid white;
                     padding-top: 15px;
+                    padding-bottom: 30px;
                 }
                 .img {
                     margin: 30px 30px 25px 30px;
@@ -35,19 +36,20 @@ class AccountView extends PolymerElement {
                     color: white;
                     margin-left: auto;
                     margin-right: auto;
-                    height: 60px;
-                    width: 180px;
+                    height: 50px;
+                    width: 160px;
                     font-weight: 600;
                     font-size: 20px;
                 }
                 .center1 {
                     margin-left: auto;
                     margin-right: auto;
-                    margin-top: 30px;
-                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
                 }
                 .center2 {
-                    margin-top: 0px;
+                    display: flex;
+                    align-items: center;
                     margin-left: auto;
                     margin-right: auto;
                     margin-bottom: 15px;
@@ -63,7 +65,7 @@ class AccountView extends PolymerElement {
                                 VIEW STATS
                             </vaadin-button>
                         </div>
-                        <div class="center2"> 
+                        <div class="center1"> 
                             <vaadin-button class="btn" id="logOut">
                                 LOG OUT
                             </vaadin-button>

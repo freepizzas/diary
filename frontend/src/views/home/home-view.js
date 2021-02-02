@@ -18,52 +18,48 @@ class HomeView extends PolymerElement {
           margin-left: auto;
       }
       .header1 {
-        font-family: 'roboto_condensedbold';
-        font-size: 35px;
+          font-family: 'roboto_condensedbold';
+          font-size: 35px;
           font-weight: 800;
           color: white;
-          margin-bottom: -5%;
+          padding: 10px 30px 10px 30px;
           text-align: center;
-          background-color: #ff4f5a;
+          background-color: #942b32;
           border: 2px solid white;
-          padding-bottom: 15px;
           border-radius: 25px;
-          margin-top: 0px;
+          margin-bottom: 0px;
       }
       .header2 {
-        font-family: 'roboto_condensedbold';
-        font-size: 35px;
+          margin-top: 0px;
+          font-family: 'roboto_condensedbold';
+          font-size: 35px;
           font-weight: 800;
           color: white;
-          text-align: center;
-          background-color: #ff4f5a; 
-          margin-top: 15px;
+          background-color: #942b32;
           padding: 10px 30px 10px 30px;
           border: 2px solid white;
           border-radius: 25px;
-          
       }
       .btn-1 {
-        font-family: 'roboto_condensedbold';
-        font-weight: 600;
-        background-color: #ff4f5a;
-        margin-left: auto;
-        color: white;
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        font-size: 20px;
-        border-radius: 25px;
-        border: 2px solid white;
-        line-height: 1;
-        height: 70px;
+          font-family: 'roboto_condensedbold';
+          font-weight: 600;
+          background-color: #942b32;
+          margin-left: auto;
+          color: white;
+          display: block;
+          text-align: center;
+          text-decoration: none;
+          font-size: 20px;
+          border-radius: 25px;
+          border: 2px solid white;
+          line-height: 1;
+          height: 70px;
       }
       .btn-2 {
-        font-family: 'roboto_condensedbold';
-        font-weight: 600;
-
+          font-family: 'roboto_condensedbold';
+          font-weight: 600;
           margin-right: auto;
-          background-color: #ff4f5a;
+          background-color: #942b32;
           color: white;
           text-align: center;
           text-decoration: none;

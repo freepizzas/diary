@@ -66,12 +66,32 @@ class HistoryView extends PolymerElement {
             border: 1px solid black;
             color: black;
         }
+        .sorry {
+            margin-top: 35vh;
+            border: 2px solid black;
+            border-radius: 25px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .sorry-inner {
+            padding: 40px 80px 40px 80px;
+            font-family: roboto_condensedbold;
+            font-size: 20px;
+            text-align: center;
+            
+        }
       </style>
 <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
  <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;" class="outer" id="vaadinVerticalLayout1"></vaadin-vertical-layout>
  <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;" class="centered">
-  <div id="isNone">
-    Div 
+  <div class="sorry" id="isNone">
+    <div class="sorry-inner">
+        WE ARE SORRY, <br>
+        BUT THERE AREN'T <br>
+        ANY ENTRIES. <br>
+        GO AND WRITE <br>
+        SOMETHING! :D
+    </div>
   </div>
   <vaadin-grid id="grid" items="[[items]]">
    <vaadin-grid-column id="vaadinGridColumn">
