@@ -1,5 +1,4 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-import '../question/question-view.js';
 
 class TexteditorqView extends PolymerElement {
 
