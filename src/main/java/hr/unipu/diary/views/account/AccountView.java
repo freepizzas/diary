@@ -37,6 +37,10 @@ public class AccountView extends PolymerTemplate<TemplateModel> {
             logOut.getUI().ifPresent(ui ->
                     ui.navigate(""));
         });
+        stats.addClickListener(e -> {
+            stats.getUI().ifPresent(ui ->
+                    ui.navigate("statistics"));
+        });
 
     }
 }

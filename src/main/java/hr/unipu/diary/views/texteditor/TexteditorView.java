@@ -58,10 +58,9 @@ public class TexteditorView extends PolymerTemplate<TexteditorView.TexteditorVie
                         var rtString = Jsoup.parse(rt).text();
                         TextEntry entry = new TextEntry(user.getUsername(), time, longFormat, rtString);
                         textEntryService.save(entry);
-
-                        save.getUI().ifPresent(ui ->
-                                ui.navigate("home"));
                     }
+                    save.getUI().ifPresent(ui ->
+                            ui.navigate("home"));
                 }
         );
     }
