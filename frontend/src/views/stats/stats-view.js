@@ -31,12 +31,33 @@ class StatsView extends PolymerElement {
                 vaadin-chart {
                     border-radius: 25px;
                 }
+                .sorry {
+                    margin-top: 35vh;
+                    border: 2px solid white;
+                    border-radius: 25px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .sorry-inner {
+                    padding: 40px 80px 40px 80px;
+                    font-family: roboto_condensedbold;
+                    font-size: 20px;
+                    color: white;
+                    text-align: center;
+                    
+                }
             </style>
 <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout">
  <vaadin-vertical-layout theme="spacing" style="width: 75%; height: 100%;" id="vaadinVerticalLayout"></vaadin-vertical-layout>
  <vaadin-vertical-layout style="width: 100%; height: 100%;">
-  <div id="isNone">
-    Div 
+  <div class="sorry" id="isNone">
+    <div class="sorry-inner">
+        WE ARE SORRY, <br>
+        BUT THERE AREN'T <br>
+        ANY ENTRIES. <br>
+        GO AND WRITE <br>
+        SOMETHING! :D
+    </div>
   </div>
   <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
    <div class="center-top">

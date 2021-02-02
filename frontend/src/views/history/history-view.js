@@ -17,14 +17,13 @@ class HistoryView extends PolymerElement {
           display: block;
           height: 100%;
         }
-
         vaadin-grid {
           height: 100%;
           line-height: var(--lumo-line-height-m);
           border: 0;
         }
         vaadin-grid-cell {
-            border-top: 0px;
+            border-top: 0px;   
         }
         vaadin-grid-cell-content {
           background-color: #ffe23f;
@@ -65,6 +64,7 @@ class HistoryView extends PolymerElement {
             border-radius: 25px;
             border: 1px solid black;
             color: black;
+            overflow-wrap: break-word;
         }
         .sorry {
             margin-top: 35vh;
