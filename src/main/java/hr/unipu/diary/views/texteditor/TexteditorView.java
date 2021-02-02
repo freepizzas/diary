@@ -59,8 +59,10 @@ public class TexteditorView extends PolymerTemplate<TexteditorView.TexteditorVie
                         TextEntry entry = new TextEntry(user.getUsername(), time, longFormat, rtString);
                         textEntryService.save(entry);
                     }
-                    save.getUI().ifPresent(ui ->
-                            ui.navigate("home"));
+                    if(rt != null || mood != null) {
+                        save.getUI().ifPresent(ui ->
+                                ui.navigate("home"));
+                    }
                 }
         );
     }
