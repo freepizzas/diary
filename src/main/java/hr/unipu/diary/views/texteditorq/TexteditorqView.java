@@ -70,12 +70,12 @@ public class TexteditorqView extends PolymerTemplate<TexteditorqView.Texteditorq
     private String getQuestions() {
         Random rand = new Random();
         List<String> questions = new ArrayList<>();
-        questions.add("What’s the one thing you would like to change about yourself?");
+        questions.add("What’s your biggest regret?");
         questions.add("What’s an ideal weekend for you?");
         questions.add("What is one dream you have yet to accomplish?");
         questions.add("What is the greatest struggle you’ve overcome?");
-        questions.add("If you could live anywhere in the world where would it be?");
-        questions.add("If you could change one thing about the world what would it be?");
+        questions.add("Where would you like to live in the world?");
+        questions.add("What would you change in your life?");
         questions.add("Who is your favorite historical figure?");
         questions.add("Dogs or Cats?");
         questions.add("If you could get away with anything that you do?");
