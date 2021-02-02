@@ -12,7 +12,7 @@ class FeelingView extends PolymerElement {
 
     static get template() {
         return html`
-<style include="shared-styles">
+            <style include="shared-styles">
                 :host {
                     display: block;
                     height: 100%;
@@ -26,6 +26,7 @@ class FeelingView extends PolymerElement {
                     margin-top: 5%;
                     margin-bottom: 5%;
                 }
+
                 .btn1 {
                     font-family: 'Roboto', 'Noto', sans-serif;
                     font-weight: 600;
@@ -42,6 +43,7 @@ class FeelingView extends PolymerElement {
                     width: 280px;
                     margin-left: 20px;
                 }
+
                 .btn2 {
                     font-family: 'Roboto', 'Noto', sans-serif;
                     font-weight: 600;
@@ -57,6 +59,7 @@ class FeelingView extends PolymerElement {
                     height: 70px;
                     width: 280px;
                 }
+
                 .btn3 {
                     font-family: 'Roboto', 'Noto', sans-serif;
                     font-weight: 600;
@@ -72,6 +75,7 @@ class FeelingView extends PolymerElement {
                     height: 70px;
                     width: 280px;
                 }
+
                 .btn4 {
                     font-family: 'Roboto', 'Noto', sans-serif;
                     font-weight: 600;
@@ -87,6 +91,7 @@ class FeelingView extends PolymerElement {
                     height: 70px;
                     width: 280px;
                 }
+
                 .btn5 {
                     font-family: 'Roboto', 'Noto', sans-serif;
                     font-weight: 600;
@@ -102,46 +107,55 @@ class FeelingView extends PolymerElement {
                     height: 70px;
                     width: 280px;
                 }
+
                 .icon-spacing {
                     margin-left: auto;
                     margin-right: auto;
                 }
+
                 .background {
                     background-color: #fc5764;
                 }
             </style>
-<vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout" class="background">
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;" id="vaadinHorizontalLayout1">
-  <vaadin-horizontal-layout theme="spacing" style="width: 100%;" class="centered" id="vaadinHorizontalLayout2">
-   <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout1" style="align-self: center;">
-    <vaadin-button id="reallySad" class="btn1">
-      I FEEL REALLY SAD 
-    </vaadin-button>
-   </vaadin-vertical-layout>
-   <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout2" style="align-self: center;">
-    <vaadin-button id="sad" class="btn2">
-      I FEEL SAD 
-    </vaadin-button>
-   </vaadin-vertical-layout>
-   <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout3" style="align-self: center;">
-    <vaadin-button id="ok" class="btn3">
-      I FEEL OK 
-    </vaadin-button>
-   </vaadin-vertical-layout>
-   <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout4" style="align-self: center;">
-    <vaadin-button id="nice" class="btn4">
-      I FEEL NICE 
-    </vaadin-button>
-   </vaadin-vertical-layout>
-   <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout5" style="align-self: center;">
-    <vaadin-button id="reallyNice" class="btn5">
-      I FEEL REALLY NICE 
-    </vaadin-button>
-   </vaadin-vertical-layout>
-  </vaadin-horizontal-layout>
- </vaadin-horizontal-layout>
-</vaadin-vertical-layout>
-`;
+            <vaadin-vertical-layout style="width: 100%; height: 100%;" id="vaadinVerticalLayout" class="background">
+                <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;"
+                                          id="vaadinHorizontalLayout1">
+                    <vaadin-horizontal-layout theme="spacing" style="width: 100%;" class="centered"
+                                              id="vaadinHorizontalLayout2">
+                        <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout1"
+                                                style="align-self: center;">
+                            <vaadin-button id="reallySad" class="btn1">
+                                I FEEL REALLY SAD
+                            </vaadin-button>
+                        </vaadin-vertical-layout>
+                        <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout2"
+                                                style="align-self: center;">
+                            <vaadin-button id="sad" class="btn2">
+                                I FEEL SAD
+                            </vaadin-button>
+                        </vaadin-vertical-layout>
+                        <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout3"
+                                                style="align-self: center;">
+                            <vaadin-button id="ok" class="btn3">
+                                I FEEL OK
+                            </vaadin-button>
+                        </vaadin-vertical-layout>
+                        <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout4"
+                                                style="align-self: center;">
+                            <vaadin-button id="nice" class="btn4">
+                                I FEEL NICE
+                            </vaadin-button>
+                        </vaadin-vertical-layout>
+                        <vaadin-vertical-layout theme="spacing" class="icon-spacing" id="vaadinVerticalLayout5"
+                                                style="align-self: center;">
+                            <vaadin-button id="reallyNice" class="btn5">
+                                I FEEL REALLY NICE
+                            </vaadin-button>
+                        </vaadin-vertical-layout>
+                    </vaadin-horizontal-layout>
+                </vaadin-horizontal-layout>
+            </vaadin-vertical-layout>
+        `;
     }
 
     static get is() {

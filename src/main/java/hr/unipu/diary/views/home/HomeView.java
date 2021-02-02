@@ -1,26 +1,18 @@
 package hr.unipu.diary.views.home;
 
-import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.dependency.JsModule;
-import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.H1;
-import com.vaadin.flow.component.html.Image;
-import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
-import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.VaadinSession;
 import com.vaadin.flow.templatemodel.TemplateModel;
-import hr.unipu.diary.backend.entity.TextEntry;
 import hr.unipu.diary.backend.entity.User;
 import hr.unipu.diary.views.main.MainView;
 import com.vaadin.flow.router.RouteAlias;
-import org.vaadin.alump.materialicons.MaterialIcons;
 
 import java.util.List;
 import java.util.Locale;
@@ -37,10 +29,6 @@ public class HomeView extends PolymerTemplate<HomeView.HomeViewModel> {
     private Button letMeWrite;
     @Id("askMeAQ")
     private Button askMeAQ;
-
-    public static interface HomeViewModel extends TemplateModel {
-        public void setItems(String items);
-    }
 
     public HomeView() {
         vaadinVerticalLayout.getStyle().set("background-image", "url('images/tea.jpg')");
@@ -59,5 +47,9 @@ public class HomeView extends PolymerTemplate<HomeView.HomeViewModel> {
         var user = VaadinSession.getCurrent().getAttribute(User.class);
         getModel().setItems(user.getUsername().toUpperCase(Locale.ROOT));
 
+    }
+
+    public static interface HomeViewModel extends TemplateModel {
+        public void setItems(String items);
     }
 }

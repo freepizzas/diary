@@ -29,10 +29,6 @@ public class HistoryView extends PolymerTemplate<HistoryViewModel> {
     private Element vaadinVerticalLayout2;
     @Id("isNone")
     private Div isNone;
-    
-    public static interface HistoryViewModel extends TemplateModel {
-        public void setItems(List<TextEntry> items);
-    }
 
     public HistoryView(TextEntryRepository textEntryRepository) {
         vaadinVerticalLayout1.getStyle().set("background-image", "url('images/bookleft.png')");
@@ -44,5 +40,9 @@ public class HistoryView extends PolymerTemplate<HistoryViewModel> {
             List<TextEntry> entries = text;
             getModel().setItems(entries);
         } else isNone.setVisible(true);
+    }
+
+    public static interface HistoryViewModel extends TemplateModel {
+        public void setItems(List<TextEntry> items);
     }
 }

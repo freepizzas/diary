@@ -30,9 +30,6 @@ import hr.unipu.diary.views.history.HistoryView;
 import hr.unipu.diary.views.account.AccountView;
 import com.vaadin.flow.theme.lumo.Lumo;
 
-/**
- * The main view is a top-level placeholder for other views.
- */
 @CssImport(value = "./styles/views/main/main-view.css", themeFor = "vaadin-app-layout")
 @StyleSheet("context://fonts/Roboto_Condensed/stylesheet.css")
 @CssImport("./styles/views/main/main-view.css")
@@ -47,34 +44,6 @@ public class MainView extends AppLayout implements BeforeEnterObserver {
         HorizontalLayout header = createHeader();
         menu = createMenuTabs();
         addToNavbar(createTopBar(header, menu));
-    }
-
-    private VerticalLayout createTopBar(HorizontalLayout header, Tabs menu) {
-        VerticalLayout layout = new VerticalLayout();
-        layout.getThemeList().add("light");
-        layout.setWidthFull();
-        layout.setSpacing(false);
-        layout.setPadding(false);
-        layout.setAlignItems(FlexComponent.Alignment.CENTER);
-        layout.add(header, menu);
-        return layout;
-    }
-
-    private HorizontalLayout createHeader() {
-        HorizontalLayout header = new HorizontalLayout();
-        header.setPadding(false);
-        header.setSpacing(false);
-        header.setWidthFull();
-        header.setAlignItems(FlexComponent.Alignment.CENTER);
-        header.setId("header");
-        Image logo = new Image("images/logo.png", "diary logo");
-        logo.setId("logo");
-        header.add(logo);
-//        Image avatar = new Image("images/user.svg", "Avatar");
-//        avatar.setId("avatar");
-//        header.add(new H1("Diary"));
-//        header.add(avatar);
-        return header;
     }
 
     private static Tabs createMenuTabs() {
@@ -99,6 +68,30 @@ public class MainView extends AppLayout implements BeforeEnterObserver {
         return tab;
     }
 
+    private VerticalLayout createTopBar(HorizontalLayout header, Tabs menu) {
+        VerticalLayout layout = new VerticalLayout();
+        layout.getThemeList().add("light");
+        layout.setWidthFull();
+        layout.setSpacing(false);
+        layout.setPadding(false);
+        layout.setAlignItems(FlexComponent.Alignment.CENTER);
+        layout.add(header, menu);
+        return layout;
+    }
+
+    private HorizontalLayout createHeader() {
+        HorizontalLayout header = new HorizontalLayout();
+        header.setPadding(false);
+        header.setSpacing(false);
+        header.setWidthFull();
+        header.setAlignItems(FlexComponent.Alignment.CENTER);
+        header.setId("header");
+        Image logo = new Image("images/logo.png", "diary logo");
+        logo.setId("logo");
+        header.add(logo);
+        return header;
+    }
+
     @Override
     protected void afterNavigation() {
         super.afterNavigation();
@@ -113,7 +106,7 @@ public class MainView extends AppLayout implements BeforeEnterObserver {
     @Override
     public void beforeEnter(BeforeEnterEvent event) {
         var access = VaadinSession.getCurrent().getAttribute("access");
-        if(access == null){
+        if (access == null) {
             event.rerouteTo("");
 
         } else if (!((Boolean) access).booleanValue()) {

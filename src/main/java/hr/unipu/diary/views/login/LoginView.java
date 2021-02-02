@@ -35,7 +35,6 @@ public class LoginView extends PolymerTemplate<LoginView.LoginViewModel> {
                 Notification.show("Wrong credentials.");
             }
         });
-        // You can initialise any data required for the connected UI components here.
     }
 
     /**

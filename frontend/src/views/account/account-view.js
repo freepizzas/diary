@@ -24,12 +24,14 @@ class AccountView extends PolymerElement {
                     padding-top: 15px;
                     padding-bottom: 30px;
                 }
+
                 .img {
                     margin: 30px 30px 25px 30px;
                     padding: 15px 15px 15px 15px;
                     border-radius: 25px;
                     border: 3px solid #153043;
                 }
+
                 .btn {
                     font-family: 'roboto_condensedbold';
                     background-color: #153043;
@@ -41,12 +43,14 @@ class AccountView extends PolymerElement {
                     font-weight: 600;
                     font-size: 20px;
                 }
+
                 .center1 {
                     margin-left: auto;
                     margin-right: auto;
                     display: flex;
                     align-items: center;
                 }
+
                 .center2 {
                     display: flex;
                     align-items: center;
@@ -65,11 +69,11 @@ class AccountView extends PolymerElement {
                                 VIEW STATS
                             </vaadin-button>
                         </div>
-                        <div class="center1"> 
+                        <div class="center1">
                             <vaadin-button class="btn" id="logOut">
                                 LOG OUT
                             </vaadin-button>
-                        </div>                     
+                        </div>
                         </div>
                     </vaadin-vertical-layout>
                 </vaadin-horizontal-layout>

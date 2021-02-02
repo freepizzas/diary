@@ -29,7 +29,7 @@ public class AccountView extends PolymerTemplate<TemplateModel> {
     private Button stats;
 
     public AccountView() {
-        Image profile = new Image("images/profile_pic.png","");
+        Image profile = new Image("images/profile_pic.png", "");
         profileImage.add(profile);
         vaadinVerticalLayout.getStyle().set("background-image", "url('images/red.jpg')");
         logOut.addClickListener(e -> {

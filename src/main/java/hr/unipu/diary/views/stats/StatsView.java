@@ -17,11 +17,14 @@ import hr.unipu.diary.backend.entity.MoodEntry;
 import hr.unipu.diary.backend.entity.TextEntry;
 import hr.unipu.diary.backend.repository.MoodEntryRepository;
 import hr.unipu.diary.views.main.MainView;
+
 import javax.xml.crypto.Data;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+
 import static com.helger.css.propertyvalue.CCSSValue.TRANSPARENT;
+
 @Tag("stats-view")
 @Route(value = "statistics", layout = MainView.class)
 @PageTitle("Mood Stats")

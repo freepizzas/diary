@@ -46,6 +46,7 @@ class TexteditorqView extends PolymerElement {
                     height: 45px;
                     width: 100px;
                 }
+
                 .inner {
                     background-color: white;
                     padding: 20px 20px 20px 20px;
@@ -55,6 +56,7 @@ class TexteditorqView extends PolymerElement {
                     font-size: 25px;
                     font-weight: 600;
                 }
+
                 .askme {
                     margin-left: 5%;
                     margin-right: 4%;

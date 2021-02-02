@@ -8,6 +8,7 @@ import com.vaadin.flow.templatemodel.TemplateModel;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
+
 @Tag("landing-view")
 @Route("")
 @JsModule("./src/views/landing/landing-view.js")

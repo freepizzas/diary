@@ -1,58 +1,64 @@
 #header {
-  height: var(--lumo-size-xs);
-  background-color: #2a2a2b;
+    height: var(--lumo-size-xs);
+    background-color: #2a2a2b;
 }
+
 #header h1 {
-  font-size: var(--lumo-font-size-l);
-  background-color: #2a2a2b;
-  margin: 0;
-  color: white;
+    font-size: var(--lumo-font-size-l);
+    background-color: #2a2a2b;
+    margin: 0;
+    color: white;
 }
+
 #header img#logo {
-  height: var(--lumo-size-xl);
-  margin-left: var(--lumo-space-s);
-  margin-top: var(--lumo-space-xl);
-  background-color: #2a2a2b;
+    height: var(--lumo-size-xl);
+    margin-left: var(--lumo-space-s);
+    margin-top: var(--lumo-space-xl);
+    background-color: #2a2a2b;
 }
+
 vaadin-app-layout[dir='rtl'] vaadin-horizontal-layout #header img#avatar {
-  margin-left: var(--lumo-space-m);
-  margin-right: auto;
-  color: white;
+    margin-left: var(--lumo-space-m);
+    margin-right: auto;
+    color: white;
 }
+
 vaadin-app-layour {
-  color: white;
+    color: white;
 }
+
 vaadin-vertical-layout {
-  background-color: #2a2a2b;
-  font-family: 'Roboto', 'Noto', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
+    background-color: #2a2a2b;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
 }
+
 html {
-  --lumo-primary-text-color: white;
-  --lumo-primary-color: black;
-  font-size: 20px;
-  font-family: 'Roboto', 'Noto', sans-serif !important;
+    --lumo-primary-text-color: white;
+    --lumo-primary-color: black;
+    font-size: 20px;
+    font-family: 'Roboto', 'Noto', sans-serif !important;
 
 }
+
 [aria-selected="true"] {
-  color: white;
-}
-[aria-selected="false"] {
-  color: white;
-}
-:host([selected])::before, :host([selected])::after {
-  color:white;
-  background-color: var(--color) #000000 !important;
-  transform: unset;
-  content: none;
-}
-:host::before, :host::after {
-  background-color: black;
-  transform: unset;
-  content: none;
+    color: white;
 }
 
-          /*hsl(265, 90%, 52%);*/
-  /*--lumo-primary-color-50pct: hsla(265, 90%, 52%, 0.5);*/
-  /*--lumo-primary-color-10pct: hsla(265, 90%, 52%, 0.1);*/
+[aria-selected="false"] {
+    color: white;
+}
+
+:host([selected])::before, :host([selected])::after {
+    color: white;
+    background-color: var(--color) #000000 !important;
+    transform: unset;
+    content: none;
+}
+
+:host::before, :host::after {
+    background-color: black;
+    transform: unset;
+    content: none;
+}
