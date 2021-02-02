@@ -17,6 +17,10 @@
 vaadin-app-layout[dir='rtl'] vaadin-horizontal-layout #header img#avatar {
   margin-left: var(--lumo-space-m);
   margin-right: auto;
+  color: white;
+}
+vaadin-app-layour {
+  color: white;
 }
 vaadin-vertical-layout {
   background-color: #2a2a2b;
@@ -26,9 +30,27 @@ vaadin-vertical-layout {
 }
 html {
   --lumo-primary-text-color: white;
-  --lumo-primary-color: #287cf7;
-  font-family: 'Roboto', 'Noto', sans-serif;
-  color: black !important;
+  --lumo-primary-color: black;
+  font-size: 20px;
+  font-family: 'Roboto', 'Noto', sans-serif !important;
+
+}
+[aria-selected="true"] {
+  color: white;
+}
+[aria-selected="false"] {
+  color: white;
+}
+:host([selected])::before, :host([selected])::after {
+  color:white;
+  background-color: var(--color) #000000 !important;
+  transform: unset;
+  content: none;
+}
+:host::before, :host::after {
+  background-color: black;
+  transform: unset;
+  content: none;
 }
 
           /*hsl(265, 90%, 52%);*/
